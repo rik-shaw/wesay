@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using SIL.Windows.Forms.ImageGallery;
+using SIL.Windows.Forms.ImageToolbox.ImageGallery;
 
 namespace WeSay.LexicalTools.AddPictures
 {

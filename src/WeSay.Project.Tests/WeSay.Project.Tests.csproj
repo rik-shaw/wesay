@@ -119,10 +119,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.WritingSystems">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.WritingSystems.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>
-    </Reference>
     <Reference Include="SIL.WritingSystems.Tests">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.WritingSystems.Tests.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>

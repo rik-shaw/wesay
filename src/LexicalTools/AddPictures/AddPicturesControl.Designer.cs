@@ -1,4 +1,4 @@
-﻿using SIL.Windows.Forms.ImageGallery;
+﻿using SIL.Windows.Forms.ImageToolbox.ImageGallery;
 
 namespace WeSay.LexicalTools.AddPictures
 {
