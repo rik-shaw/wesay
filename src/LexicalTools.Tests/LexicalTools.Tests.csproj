@@ -70,44 +70,46 @@
     <Reference Include="Autofac, Version=2.6.3.862, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Chorus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Chorus.App">
       <SpecificVersion>False</SpecificVersion>
       <ExecutableExtension>.exe</ExecutableExtension>
-      <HintPath>..\..\lib\$(Configuration)\Chorus.exe</HintPath>
+      <HintPath>..\packages\SIL.Chorus.App.3.1.0-beta0046\lib\net461\Chorus.exe</HintPath>
     </Reference>
     <Reference Include="NUnitForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\common\NUnitForms.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\$(Configuration)\SIL.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cab3c8c5232dfcf2">
-      <HintPath>..\..\lib\Debug\SIL.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.DictionaryServices, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.DictionaryServices.dll</HintPath>
+      <HintPath>..\packages\SIL.Core.8.0.0-beta0239\lib\net461\SIL.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.Lift, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Core.Desktop">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.Lift.dll</HintPath>
+      <HintPath>..\packages\SIL.Core.Desktop.8.0.0-beta0239\lib\net461\SIL.Core.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.TestUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.DictionaryServices">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.TestUtilities.dll</HintPath>
+      <HintPath>..\packages\SIL.DictionaryServices.8.0.0-beta0239\lib\net461\SIL.DictionaryServices.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.Windows.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Lift">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.Windows.Forms.dll</HintPath>
+      <HintPath>..\packages\SIL.Lift.8.0.0-beta0239\lib\net461\SIL.Lift.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.Windows.Forms.Keyboarding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.TestUtilities">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.Windows.Forms.Keyboarding.dll</HintPath>
+      <HintPath>..\packages\SIL.TestUtilities.8.0.0-beta0239\lib\net461\SIL.TestUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="SIL.WritingSystems, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Windows.Forms">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.WritingSystems.dll</HintPath>
+      <HintPath>..\packages\SIL.Windows.Forms.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Windows.Forms.Keyboarding">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.Keyboarding.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.WritingSystems">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.WritingSystems.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
