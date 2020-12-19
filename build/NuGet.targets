@@ -33,7 +33,7 @@
 			<Architecture Condition="'$(DpkgArch)'=='amd64'">64</Architecture>
 			<Architecture Condition="'$(DpkgArch)'=='i386'">32</Architecture>
 			<PackagesConfigSource>$(NuGetToolsPath)packages-linux-$(DpkgArch).config</PackagesConfigSource>
-			<GeckoDir>$(RootDir)/src/packages/Geckofx45.$(Architecture).Linux.45.0.28</GeckoDir>
+			<GeckoDir>$(RootDir)/src/packages/Geckofx45.$(Architecture).Linux.45.0.37</GeckoDir>
 		</PropertyGroup>
 	</Target>
 
@@ -53,7 +53,7 @@
 		just setting -ConfigFile is not enough to make nuget not work with config files in the home directory.
 		Setting XDG_CONFIG_HOME prevents nuget from working with config files the home directory.
 		-->
-		<NuGetCommand Condition=" '$(OS)' != 'Windows_NT' ">[ -d $HOME ] || export XDG_CONFIG_HOME=`mktemp -d`; mono --runtime=v4.0.30319 $(NuGetExePath)</NuGetCommand>
+		<NuGetCommand Condition=" '$(OS)' != 'Windows_NT' ">[ -d $HOME ] || export XDG_CONFIG_HOME=`mktemp -d`; "$(MONO_PREFIX)"/bin/mono --runtime="$(MONO_RUNTIME)" $(NuGetExePath)</NuGetCommand>
 
 		<!-- Command to download packages -->
 		<CoreRestoreCommand>$(NuGetCommand) restore "$(PackagesConfig)" -NonInteractive -PackagesDirectory "$(SolutionDir)/src/packages"</CoreRestoreCommand>
