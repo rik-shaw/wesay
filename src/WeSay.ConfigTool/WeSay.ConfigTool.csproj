@@ -145,6 +145,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.Keyboarding.dll</HintPath>
     </Reference>
+    <Reference Include="ibusdotnet">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ibusdotnet.2.0.3\lib\net461\ibusdotnet.dll</HintPath>
+    </Reference>
     <Reference Include="Keyman7Interop">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\build\Keyman7Interop.dll</HintPath>

@@ -97,6 +97,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.Keyboarding.dll</HintPath>
     </Reference>
+    <Reference Include="ibusdotnet">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ibusdotnet.2.0.3\lib\net461\ibusdotnet.dll</HintPath>
+    </Reference>
     <Reference Include="Enchant.Net">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Enchant.Net.1.4.2\lib\net461\Enchant.Net.dll</HintPath>
