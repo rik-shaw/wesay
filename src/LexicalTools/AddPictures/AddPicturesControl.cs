@@ -31,8 +31,8 @@ namespace WeSay.LexicalTools.AddPictures
 			if (!string.IsNullOrEmpty(_searchWords.Text))
 			{
 				bool foundExactMatches;
-				IEnumerable<object> results = collection.GetMatchingPictures(_searchWords.Text, out foundExactMatches);
-				_thumbnailViewer.LoadItems(collection.GetPathsFromResults(results, true));
+				///rik IEnumerable<object> results = collection.GetMatchingPictures(_searchWords.Text, out foundExactMatches);
+				///rik _thumbnailViewer.LoadItems(collection.GetPathsFromResults(results, true));
 			}
 		}
 	}

@@ -31,7 +31,7 @@ namespace WeSay.LexicalTools.AddPictures
 		public override void Activate()
 		{
 			base.Activate();
-			_imageCollection = ArtOfReadingImageCollection.FromStandardLocations();
+			///ruj _imageCollection = ArtOfReadingImageCollection.FromStandardLocations();
 			if(_imageCollection == null)
 			{
 				throw new ConfigurationException("Could not locate image index.");
