@@ -86,9 +86,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Lift.8.0.0-beta0239\lib\net461\SIL.Lift.dll</HintPath>
     </Reference>
-    <Reference Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release' " Include="SIL.Media, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SIL.Media">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\SIL.Media.dll</HintPath>
+      <HintPath>..\packages\SIL.Media.8.0.0-beta0239\lib\net461\SIL.Media.dll</HintPath>
     </Reference>
     <Reference Include="SIL.Windows.Forms">
       <SpecificVersion>False</SpecificVersion>

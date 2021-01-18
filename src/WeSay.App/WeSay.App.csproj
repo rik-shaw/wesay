@@ -162,7 +162,8 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Vulcan.Uczniowie.HelpProvider">
-      <HintPath>..\..\lib\common\Vulcan.Uczniowie.HelpProvider.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Vulcan.Uczniowie.HelpProvider.1.0.16\lib\net461\Vulcan.Uczniowie.HelpProvider.dll</HintPath>
     </Reference>
     <Reference Include="Geckofx-Core">
       <HintPath>..\..\output\$(Configuration)\Geckofx-Core.dll</HintPath>
