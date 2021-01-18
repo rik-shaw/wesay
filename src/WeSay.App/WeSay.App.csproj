@@ -121,6 +121,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.dll</HintPath>
     </Reference>
+	<Reference Include="Interop.WIA.dll">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Windows.Forms.8.0.0-beta0239\build\Interop.WIA.dll</HintPath>
+    </Reference>
     <Reference Include="SIL.Windows.Forms.Keyboarding">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.Keyboarding.dll</HintPath>
@@ -140,13 +144,9 @@
     <!--None Include="..\..\lib\common\Enchant.Net.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None-->
-	<Reference Condition="'$(OS)'=='Windows_NT'" Include="Interop.WIA.dll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+	<Reference Include="IrrKlang.NET4.dll">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\Interop.WIA.dll</HintPath>
-    </Reference>
-	<Reference Condition="'$(OS)'=='Windows_NT'" Include="IrrKlang.NET4.dll, Culture=neutral, PublicKeyToken=null">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\$(Configuration)\irrKlang.NET4.dll</HintPath>
+      <HintPath>..\packages\SIL.Media.8.0.0-beta0239\build\lib\$(Configuration)\irrKlang.NET4.dll</HintPath>
     </Reference>
     <Reference Include="icu.net">
       <HintPath>..\packages\icu.net.2.3.2\lib\net40\icu.net.dll</HintPath>

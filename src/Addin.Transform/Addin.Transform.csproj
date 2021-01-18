@@ -119,7 +119,7 @@
     </Reference>
     <Reference Include="SIL.TestUtilities">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>...\packages\SIL.TestUtilities.8.0.0-beta0239\lib\net461\SIL.TestUtilities.dll</HintPath>
+      <HintPath>..\packages\SIL.TestUtilities.8.0.0-beta0239\lib\net461\SIL.TestUtilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
