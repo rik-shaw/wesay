@@ -80,9 +80,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Enchant.Net.1.4.2\lib\net461\Enchant.Net.dll</HintPath>
     </Reference>
-    <Reference Include="icu.net">
-      <HintPath>..\packages\icu.net.2.3.2\lib\net40\icu.net.dll</HintPath>
-    </Reference>
     <None Include="packages.config" />
     <Reference Include="NDesk.DBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099, processorArchitecture=MSIL">
       <HintPath>..\packages\NDesk.DBus.0.15.0\lib\NDesk.DBus.dll</HintPath>
