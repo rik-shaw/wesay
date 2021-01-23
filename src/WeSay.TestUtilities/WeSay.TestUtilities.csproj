@@ -1,112 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FEC3014D-0067-4D59-A838-3B046EC3C352}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net461</TargetFrameworks>
     <RootNamespace>WeSay.TestUtilities</RootNamespace>
     <AssemblyName>WeSay.TestUtilities</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
+    <Configurations>Debug;Release</Configurations>
+    <Description>WeSay WeSay.TestUtilities</Description>
+    <Company>SIL International</Company>
+    <Authors>SIL International</Authors>
+    <Product>WeSay</Product>
+    <Copyright>Copyright © 2010-2020 SIL International</Copyright>
+    <OutputPath>../../output/$(Configuration)</OutputPath>
+    <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\output\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\output\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\output\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <OutputPath>..\..\output\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="SIL.Core">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.Core.8.0.0-beta0239\lib\net461\SIL.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.Core.Desktop">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.Core.Desktop.8.0.0-beta0239\lib\net461\SIL.Core.Desktop.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.Lift">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.Lift.8.0.0-beta0239\lib\net461\SIL.Lift.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.Lexicon">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.Lexicon.8.0.0-beta0239\lib\net461\SIL.Lexicon.dll</HintPath>
-    </Reference>
-    <Reference Include="SIL.WritingSystems">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SIL.WritingSystems.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Lift" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Lexicon" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-beta0258" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="ConfigFileContentForTests.cs" />
-    <Compile Include="OptionListFileContent.cs" />
-    <Compile Include="WeSayProjectTestHelper.cs" />
-    <Compile Include="WritingSystemsIdsForTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj">
-      <Project>{5CFD0BB3-5B2A-4911-B220-9C2286151BF0}</Project>
-      <Name>WeSay.Project</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-	   Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
