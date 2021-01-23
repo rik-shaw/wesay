@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D196637-2D50-4604-A310-378083CEA809}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Addin.Transform</RootNamespace>
+    <AssemblyName>Addin.Transform</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Addin.Transform</RootNamespace>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Commandlineparameters>/usr/share/wesay/WeSay.ConfigTool.exe /home/keith/WeSay/krstest/krstest.lift</Commandlineparameters>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>Library</OutputType>
+    <DebugSymbols>true</DebugSymbols>
+    <RootNamespace>Addin.Transform</RootNamespace>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DialogAdapters.Gtk2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DialogAdapters.Gtk2.0.1.11\lib\net461\DialogAdapters.dll</HintPath>
+    </Reference>
+    <Reference Include="Enchant.Net">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Enchant.Net.1.4.2\lib\net461\Enchant.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ibusdotnet">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ibusdotnet.2.0.3\lib\net461\ibusdotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="icu.net">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\icu.net.2.7.0-beta.7\lib\net40\icu.net.dll</HintPath>
+    </Reference>
+    <Reference Include="L10NSharp">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\L10NSharp.4.1.0-beta0047\lib\net461\L10NSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Markdig.Signed">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Markdig.Signed.0.23.0\lib\net452\Markdig.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.5.0.0\lib\net461\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Mono.Addins.1.2\lib\net40\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix.NETStandard">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Mono.Posix.NETStandard.5.20.1-preview\lib\net40\Mono.Posix.NETStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="NDesk.DBus">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NDesk.DBus.0.15.0\lib\NDesk.DBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NETStandard.Library">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NETStandard.Library.1.6.1\lib\NETStandard.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnit">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.3.13.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RelaxNG">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RelaxNG.3.2.3\lib\net40\Commons.Xml.Relaxng.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpZipLib.1.3.1\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+
+    <Reference Include="SIL.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Core.8.0.0-beta0239\lib\net461\SIL.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Core.Desktop">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Core.Desktop.8.0.0-beta0239\lib\net461\SIL.Core.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.DictionaryServices">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.DictionaryServices.8.0.0-beta0239\lib\net461\SIL.DictionaryServices.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Lexicon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Lexicon.8.0.0-beta0239\lib\net461\SIL.Lexicon.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Lift">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Lift.8.0.0-beta0239\lib\net461\SIL.Lift.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.TestUtilities">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.TestUtilities.8.0.0-beta0239\lib\net461\SIL.TestUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Windows.Forms">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Windows.Forms.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Windows.Forms.Keyboarding">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\lib\net461\SIL.Windows.Forms.Keyboarding.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.WritingSystems">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.WritingSystems.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Spart">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spart.1.0.0\lib\net461\Spart.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.6</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.IO.FileSystem" />
+    <Reference Include="System.IO.FileSystem.Primitives" />
+    <Reference Include="System.Memory" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Resources.ResourceManager" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Security.AccessControl" />
+    <Reference Include="System.Security.Claims" />
+    <Reference Include="System.Security.Principal.Windows" />
+    <Reference Include="System.Text.Encodings.Web" />
+    <Reference Include="System.Text.Json" />
+    <Reference Include="System.Threading.Tasks.Extensions" />
+    <Reference Include="System.ValueTuple">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\system.valuetuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TagLibSharp">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TagLibSharp.2.2.0\lib\net45\TagLibSharp.dll</HintPath>
+    </Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LameProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LameProgressDialog.Designer.cs">
+      <DependentUpon>LameProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfDictionary\AboutMakePdfDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdfDictionary\AboutMakePdfDictionary.Designer.cs">
+      <DependentUpon>AboutMakePdfDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfDictionary\FLExCompatibleXhtmlWriter.cs" />
+    <Compile Include="LexiquePro\AboutLexiquePro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexiquePro\AboutLexiquePro.Designer.cs">
+      <DependentUpon>AboutLexiquePro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexiquePro\LexiqueProSender.cs" />
+    <Compile Include="PdfDictionary\MultigraphParser.cs" />
+    <Compile Include="PdfDictionary\PdfMaker.cs" />
+    <Compile Include="HtmlInWord.cs" />
+    <Compile Include="HtmlTransformer.cs" />
+    <Compile Include="PLiftMaker.cs" />
+    <Compile Include="PdfDictionary\PrinceXmlWrapper.cs" />
+    <Compile Include="PdfDictionary\Prince.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SFMChangesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SFMChangesDialog.Designer.cs">
+      <DependentUpon>SFMChangesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SfmTransformer.cs" />
+    <Compile Include="LiftTransformer.cs" />
+    <Compile Include="SfmTransformSettings.cs" />
+    <Compile Include="OpenOffice\OpenOfficeAddin.cs" />
+    <Compile Include="Xhtml\XHtml.cs" />
+    <Compile Include="PdfDictionary\LibreOfficePdf.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LexicalModel\LexicalModel.csproj">
+      <Project>{5F61C809-B6C0-4567-9603-B2198E1AD038}</Project>
+      <Name>LexicalModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.AddinLib\WeSay.AddinLib.csproj">
+      <Project>{E651E83C-94DD-4D6D-ABA2-C9FDA34FBA55}</Project>
+      <Name>WeSay.AddinLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj">
+      <Project>{600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD}</Project>
+      <Name>WeSay.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj">
+      <Project>{F12EB680-0990-4900-B77E-0FBF2E28A815}</Project>
+      <Name>WeSay.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj">
+      <Project>{5CFD0BB3-5B2A-4911-B220-9C2286151BF0}</Project>
+      <Name>WeSay.Project</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SFMChangesDialog.resx">
+      <DependentUpon>SFMChangesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lift2sfm.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LameProgressDialog.resx">
+      <DependentUpon>LameProgressDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexiquePro\AboutLexiquePro.resx">
+      <DependentUpon>AboutLexiquePro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plift2html.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdfDictionary\AboutMakePdfDictionary.resx">
+      <DependentUpon>AboutMakePdfDictionary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenOffice\lift2odfContent.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\genericAction.png" />
+    <None Include="Resources\printAction.png" />
+    <None Include="Resources\toolbox.png" />
+    <None Include="Resources\wordExport.png" />
+    <None Include="Resources\greenPrinter.png" />
+    <None Include="Resources\pdfdictionary.png" />
+    <None Include="Resources\lexiquePro.bmp" />
+    <None Include="Resources\greenLexiquePro.png" />
+    <None Include="Resources\greenPdf.png" />
+    <None Include="Resources\greenPdfDictionary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OpenOffice\ulsx2odfStyles.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

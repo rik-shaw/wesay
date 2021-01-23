@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DA57D98-255B-46DE-BF94-D163695A0568}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeSay.App.Tests</RootNamespace>
+    <AssemblyName>WeSay.App.Tests</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>Library</OutputType>
+    <AssemblyName>WeSay.App.Tests</AssemblyName>
+    <RootNamespace>WeSay.App.Tests</RootNamespace>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>Library</OutputType>
+    <AssemblyName>WeSay.App.Tests</AssemblyName>
+    <DebugSymbols>true</DebugSymbols>
+    <RootNamespace>WeSay.App.Tests</RootNamespace>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=2.6.3.862 Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnitForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\common\NUnitForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Core.8.0.0-beta0239\lib\net461\SIL.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Core.Desktop">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Core.Desktop.8.0.0-beta0239\lib\net461\SIL.Core.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.DictionaryServices">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.DictionaryServices.8.0.0-beta0239\lib\net461\SIL.DictionaryServices.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.Lift">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.Lift.8.0.0-beta0239\lib\net461\SIL.Lift.dll</HintPath>
+    </Reference>
+    <Reference Include="SIL.WritingSystems">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIL.WritingSystems.8.0.0-beta0239\lib\net461\SIL.WritingSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FullUIAppTests.cs" />
+    <Compile Include="TabbedFormNavigationTests.cs" />
+    <Compile Include="TabbedFormTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LexicalModel.Tests\LexicalModel.Tests.csproj">
+      <Project>{123D695C-0D5D-46E5-893F-39EC4E0B01B8}</Project>
+      <Name>LexicalModel.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LexicalModel\LexicalModel.csproj">
+      <Project>{5F61C809-B6C0-4567-9603-B2198E1AD038}</Project>
+      <Name>LexicalModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LexicalTools\LexicalTools.csproj">
+      <Project>{87AF0B02-2983-486D-857F-D1859535C234}</Project>
+      <Name>LexicalTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.App\WeSay.App.csproj">
+      <Project>{EFB9D66D-AF0F-4E45-A1AC-DB32981711D2}</Project>
+      <Name>WeSay.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj">
+      <Project>{600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD}</Project>
+      <Name>WeSay.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj">
+      <Project>{F12EB680-0990-4900-B77E-0FBF2E28A815}</Project>
+      <Name>WeSay.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Project.Tests\WeSay.Project.Tests.csproj">
+      <Project>{F644C902-A952-4797-9E2D-19D6051DD032}</Project>
+      <Name>WeSay.Project.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj">
+      <Project>{5CFD0BB3-5B2A-4911-B220-9C2286151BF0}</Project>
+      <Name>WeSay.Project</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeSay.UI\WeSay.UI.csproj">
+      <Project>{AC8F284C-7B34-4AC9-A7DE-FAF765456DFF}</Project>
+      <Name>WeSay.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+</Project>
