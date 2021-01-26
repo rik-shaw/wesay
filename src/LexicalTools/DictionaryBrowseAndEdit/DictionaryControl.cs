@@ -569,7 +569,8 @@ namespace WeSay.LexicalTools.DictionaryBrowseAndEdit
 			AddNewWord(false);
 		}
 
-		internal void AddNewWord(bool FocusWasOnFindTextBox)
+		///rik changing scope for tests
+		public void AddNewWord(bool FocusWasOnFindTextBox)
 		{
 			Logger.WriteMinorEvent("NewWord_Click");
 

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO.Compression;
+// using System.IO.Compression;
 using System.IO;
 using System.Diagnostics;
 using System.Drawing;
@@ -15,7 +15,7 @@ using SIL.DictionaryServices.Model;
 using SIL.DictionaryServices.Lift;
 using Mono.Addins;
 
-/// using ICSharpCode.SharpZipLib.Zip;
+using ICSharpCode.SharpZipLib.Zip;
 /// using Ionic.Zip;
 
 

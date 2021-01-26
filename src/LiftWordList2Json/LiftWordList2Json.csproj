@@ -15,6 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="1.9.71" />
+
+
     <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
     <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
     <PackageReference Include="SIL.DictionaryServices" Version="8.0.0-beta0258" />

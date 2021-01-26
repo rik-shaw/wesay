@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using NUnit.Extensions.Forms;
 using SIL.WritingSystems;
 using WeSay.LexicalModel.Foundation;
 using WeSay.UI.TextBoxes;
@@ -13,24 +12,24 @@ using System.Threading;
 namespace WeSay.UI.Tests
 {
 	[TestFixture]
-	public class WeSayTextBoxTests : NUnitFormTest
+	public class WeSayTextBoxTests ///rik : NUnitFormTest
 	{
 		private Form _window;
 
 		[SetUp]
-		public override void Setup()
+		public void Setup()
 		{
-			base.Setup();
-			_window = new Form();
-			_window.Size = new Size(500, 500);
+			// base.Setup();
+			// _window = new Form();
+			// _window.Size = new Size(500, 500);
 
 		}
 
 		[TearDown]
-		public override void TearDown()
+		public void TearDown()
 		{
-			_window.Dispose();
-			base.TearDown();
+			// _window.Dispose();
+			// base.TearDown();
 		}
 
 		[Test]
@@ -78,25 +77,25 @@ namespace WeSay.UI.Tests
 			Assert.Throws<InvalidOperationException>(() => textBox.ClearKeyboard());
 		}
 
-		[Test]
-		[Platform(Exclude="Unix")]
-		[Ignore("FLAKY test - sometimes fails in tc installer build release tests")]
-		public void TextReflectsKeystrokes()
-		{
-			WritingSystemDefinition ws = new WritingSystemDefinition("fr") {DefaultFont = new FontDefinition("Arial")};
-			IWeSayTextBox textBox = new WeSayTextBox(ws, "_textToSearchForBox");
-			_window.Controls.Add((Control)textBox);
-			_window.Show();
-			TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
-			KeyboardController keyboardController = new KeyboardController(t);
-			t.Properties.Focus();
-			keyboardController.Press(Convert.ToInt16("Test"));
-			keyboardController.Press(Convert.ToInt16("e"));
-			keyboardController.Press(Convert.ToInt16("s"));
-			keyboardController.Press(Convert.ToInt16("t"));
-			Assert.IsTrue(textBox.Text.Equals("Testest"));
-			keyboardController.Dispose();
+		// // [Test]
+		// // [Platform(Exclude="Unix")]
+		// // [Ignore("FLAKY test - sometimes fails in tc installer build release tests")]
+		// // public void TextReflectsKeystrokes()
+		// // {
+		// // 	WritingSystemDefinition ws = new WritingSystemDefinition("fr") {DefaultFont = new FontDefinition("Arial")};
+		// // 	IWeSayTextBox textBox = new WeSayTextBox(ws, "_textToSearchForBox");
+		// // 	_window.Controls.Add((Control)textBox);
+		// // 	_window.Show();
+		// // 	TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+		// // 	KeyboardController keyboardController = new KeyboardController(t);
+		// // 	t.Properties.Focus();
+		// // 	keyboardController.Press(Convert.ToInt16("Test"));
+		// // 	keyboardController.Press(Convert.ToInt16("e"));
+		// // 	keyboardController.Press(Convert.ToInt16("s"));
+		// // 	keyboardController.Press(Convert.ToInt16("t"));
+		// // 	Assert.IsTrue(textBox.Text.Equals("Testest"));
+		// // 	keyboardController.Dispose();
 
-		}
+		// // }
 	}
 }

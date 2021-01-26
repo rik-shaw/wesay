@@ -123,19 +123,19 @@ namespace WeSay.LexicalTools.Tests
 			}
 			_task.Deactivate();
 		}
-//
-//        [Test]
-//        [NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (ArgumentNullException))]
-//        public void Create_NullRecordListManager_Throws()
-//        {
-//            new DictionaryTask(DictionaryBrowseAndEditConfiguration.CreateForTests(), null, _viewTemplate, new TaskMemoryRepository(),  new StringLogger());//, new UserSettingsForTask());
-//        }
-//
-//        [Test]
-//        [NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (ArgumentNullException))]
-//        public void Create_NullviewTemplate_Throws()
-//        {
-//            new DictionaryTask(DictionaryBrowseAndEditConfiguration.CreateForTests(), _lexEntryRepository, null, new TaskMemoryRepository(),  new StringLogger());//, new UserSettingsForTask());
-//        }
+
+       ///rik nunitforms test: [Test]
+    //    //[NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (ArgumentNullException))]
+    //    public void Create_NullRecordListManager_Throws()
+    //    {
+    //        new DictionaryTask(DictionaryBrowseAndEditConfiguration.CreateForTests(), null, _viewTemplate, new TaskMemoryRepository(),  new StringLogger());//, new UserSettingsForTask());
+    //    }
+
+    //    [Test]
+    //    //[NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (ArgumentNullException))]
+    //    public void Create_NullviewTemplate_Throws()
+    //    {
+    //        new DictionaryTask(DictionaryBrowseAndEditConfiguration.CreateForTests(), _lexEntryRepository, null, new TaskMemoryRepository(),  new StringLogger());//, new UserSettingsForTask());
+    //    }
 	}
 }

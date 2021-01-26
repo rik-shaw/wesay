@@ -480,7 +480,7 @@ namespace WeSay.LexicalTools.Tests
 		/// Using the sorter causes XElement.Parse() to be called, which chokes on '\u001F'.
 		/// </remarks>
 		[Test]
-		[ExpectedException("SIL.Reporting.ErrorReport+ProblemNotificationSentToUserException", ExpectedMessage="character", MatchType=MessageMatch.Contains)]
+		///rik [ExpectedException("SIL.Reporting.ErrorReport+ProblemNotificationSentToUserException", ExpectedMessage="character", MatchType=MessageMatch.Contains)]
 		public void AddWord_WordConsistsOfOnlySegmentSeparatorCharacter_AddedToDatabase()
 		{
 			int originalCount = _lexEntryRepository.CountAllItems();

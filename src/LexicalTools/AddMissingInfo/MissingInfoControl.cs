@@ -22,8 +22,8 @@ namespace WeSay.LexicalTools.AddMissingInfo
 {
 	public partial class MissingInfoControl: UserControl
 	{
-		private readonly List<RecordToken<LexEntry>> _completedRecords;
-		private readonly List<RecordToken<LexEntry>> _todoRecords;
+		public readonly List<RecordToken<LexEntry>> _completedRecords;
+		public readonly List<RecordToken<LexEntry>> _todoRecords;
 		private RecordToken<LexEntry> _currentRecord;
 		private RecordToken<LexEntry> _previousRecord;
 		private RecordToken<LexEntry> _nextRecord;

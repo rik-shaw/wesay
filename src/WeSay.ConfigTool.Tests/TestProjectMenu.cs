@@ -1,5 +1,5 @@
 using System.IO;
-using NUnit.Extensions.Forms;
+using System.Threading;
 using NUnit.Framework;
 using SIL.Reporting;
 //using WeSay.Foundation.Tests;
@@ -46,19 +46,19 @@ namespace WeSay.ConfigTool.Tests
 		[Ignore("Haven't got the ability to find controls inside the filedialog yet")]
 		public void TestUsingOpenProject()
 		{
-			FormTester AdminWindow = new FormTester("WeSay Admin");
+			///rik nunitforms test: FormTester AdminWindow = new FormTester("WeSay Admin");
 
-			ToolStripMenuItemTester projectToolStripMenuItem =
-					new ToolStripMenuItemTester("projectToolStripMenuItem");
-			ToolStripMenuItemTester newProjectToolStripMenuItem =
-					new ToolStripMenuItemTester("newProjectToolStripMenuItem");
+			// ToolStripMenuItemTester projectToolStripMenuItem =
+			// 		new ToolStripMenuItemTester("projectToolStripMenuItem");
+			// ToolStripMenuItemTester newProjectToolStripMenuItem =
+			// 		new ToolStripMenuItemTester("newProjectToolStripMenuItem");
 
-			projectToolStripMenuItem.Click();
+			// projectToolStripMenuItem.Click();
 			//       ExpectModal("Browse For Folder", "ClickOKInFileDialog", true);
 
-			newProjectToolStripMenuItem.Click();
+			// newProjectToolStripMenuItem.Click();
 
-			AdminWindow.Close();
+			// AdminWindow.Close();
 		}
 
 		[Test]
@@ -71,13 +71,13 @@ namespace WeSay.ConfigTool.Tests
 			{
 				_window.CreateAndOpenProject(path, "th", "Thai");
 
-				ToolStripMenuItemTester projectToolStripMenuItem =
-						new ToolStripMenuItemTester("projectToolStripMenuItem");
-				ToolStripMenuItemTester launchProjectToolStripMenuItem =
-						new ToolStripMenuItemTester("openThisProjectInWeSayToolStripMenuItem");
-				projectToolStripMenuItem.Click();
-				launchProjectToolStripMenuItem.Click();
-				_window.Close();
+				///rik nunitforms test: ToolStripMenuItemTester projectToolStripMenuItem =
+				// 		new ToolStripMenuItemTester("projectToolStripMenuItem");
+				// ToolStripMenuItemTester launchProjectToolStripMenuItem =
+				// 		new ToolStripMenuItemTester("openThisProjectInWeSayToolStripMenuItem");
+				// projectToolStripMenuItem.Click();
+				// launchProjectToolStripMenuItem.Click();
+				// _window.Close();
 			}
 			finally
 			{
@@ -116,22 +116,22 @@ namespace WeSay.ConfigTool.Tests
 		//
 		public void ConfirmModalByYes()
 		{
-			ButtonTester t = new ButtonTester("Yes");
-			t.Click();
+			///rik nunitforms test: ButtonTester t = new ButtonTester("Yes");
+			// t.Click();
 		}
 
 		public void CancelModal()
 		{
-			FileDialogTester x = new FileDialogTester("Browse For Folder");
-			x.ClickCancel();
-			ButtonTester t = new ButtonTester("Cancel");
-			t.Click();
+			///rik nunitforms test: FileDialogTester x = new FileDialogTester("Browse For Folder");
+			// x.ClickCancel();
+			// ButtonTester t = new ButtonTester("Cancel");
+			// t.Click();
 		}
 
 		public void ClickOKInFileDialog()
 		{
-			ButtonTester t = new ButtonTester("OK");
-			t.Click();
+			///rik nunitforms test: ButtonTester t = new ButtonTester("OK");
+			// t.Click();
 		}
 
 		//		public void ConfirmModalByYesAndRemember()
