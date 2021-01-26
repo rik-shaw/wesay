@@ -34,13 +34,13 @@ namespace WeSay.LexicalTools.Tests
 		private static string _vernacularWritingSystemId = WritingSystemsIdsForTests.VernacularIdForTest;
 		private GatherBySemanticDomainConfig _config;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetup()
 		{
 			SIL.Windows.Forms.Keyboarding.KeyboardController.Initialize();
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void FixtureTearDown()
 		{
 			SIL.Windows.Forms.Keyboarding.KeyboardController.Shutdown();

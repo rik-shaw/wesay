@@ -16,7 +16,7 @@ using Gecko;
 
 namespace WeSay.UI.Tests
 {
-	[TestFixture, RequiresSTA]
+	[TestFixture, Apartment(ApartmentState.STA)]
 	[Platform(Exclude="Unix")]  // Cant initialize XULRunner in these tests on Linux.
 	class GeckoBoxTests : NUnitFormTest
 	{
@@ -25,7 +25,7 @@ namespace WeSay.UI.Tests
 		static extern bool SetDllDirectory(string lpPathName);
 		private Form _window;
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void FixtureCleanup()
 		{
 			Sldr.Cleanup();
@@ -33,7 +33,7 @@ namespace WeSay.UI.Tests
 			//ShutDownXulRunner();
 		}
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetup()
 		{
 			Sldr.Initialize(true);

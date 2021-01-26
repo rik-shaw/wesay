@@ -71,8 +71,8 @@ namespace WeSay.TreeViewIList.Tests
 	{
 		TreeViewAdaptorIList treeview;
 
-		[TestFixtureSetUp]
-		public void TestFixtureSetup()
+		[OneTimeSetUp]
+		public void OneTimeSetUp()
 		{
 			Gtk.Application.Init();
 

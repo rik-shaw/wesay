@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
+
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gecko;
@@ -16,7 +18,7 @@ using WeSay.UI.TextBoxes;
 
 namespace WeSay.UI.Tests
 {
-	[TestFixture, RequiresSTA]
+	[TestFixture, Apartment(ApartmentState.STA)]
 	[Platform(Exclude = "Unix")]  // Cant initialize XULRunner in these tests on Linux.
 	class GeckoTests : NUnitFormTest
 	{
@@ -30,7 +32,7 @@ namespace WeSay.UI.Tests
 		private bool _itemToNotDrawYetDrawn;
 		private int _countOfItemsDrawn;
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void FixtureCleanup()
 		{
 			Sldr.Cleanup();
@@ -38,7 +40,7 @@ namespace WeSay.UI.Tests
 			//ShutDownXulRunner();
 		}
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetup()
 		{
 			Sldr.Initialize(true);
@@ -86,10 +88,10 @@ namespace WeSay.UI.Tests
 			ControlTester t = new ControlTester("ControlUnderTest", _window);
 			KeyboardController keyboardController = new KeyboardController(t);
 			Application.DoEvents();
-			keyboardController.Press("T");
-			keyboardController.Press("e");
-			keyboardController.Press("s");
-			keyboardController.Press("t");
+			keyboardController.Press(Convert.ToInt16("T"));
+			keyboardController.Press(Convert.ToInt16("e"));
+			keyboardController.Press(Convert.ToInt16("s"));
+			keyboardController.Press(Convert.ToInt16("t"));
 			Application.DoEvents();
 			Assert.AreEqual("Test", textBox.Text);
 			keyboardController.Dispose();
@@ -113,12 +115,12 @@ namespace WeSay.UI.Tests
 			Application.DoEvents();
 			keyboardController.Press(Key.HOME);
 			Application.DoEvents();
-			keyboardController.Press("V");
-			keyboardController.Press("a");
-			keyboardController.Press("l");
-			keyboardController.Press("u");
-			keyboardController.Press("e");
-			keyboardController.Press(" ");
+			keyboardController.Press(Convert.ToInt16("V"));
+			keyboardController.Press(Convert.ToInt16("a"));
+			keyboardController.Press(Convert.ToInt16("l"));
+			keyboardController.Press(Convert.ToInt16("u"));
+			keyboardController.Press(Convert.ToInt16("e"));
+			keyboardController.Press(Convert.ToInt16(" "));
 			Application.DoEvents();
 			Assert.AreEqual("Value Test", textBox.Text);
 			keyboardController.Dispose();
@@ -142,11 +144,11 @@ namespace WeSay.UI.Tests
 			Application.DoEvents();
 			keyboardController.Press(Key.END);
 			Application.DoEvents();
-			keyboardController.Press(" ");
-			keyboardController.Press("T");
-			keyboardController.Press("e");
-			keyboardController.Press("s");
-			keyboardController.Press("t");
+			keyboardController.Press(Convert.ToInt16(" "));
+			keyboardController.Press(Convert.ToInt16("T"));
+			keyboardController.Press(Convert.ToInt16("e"));
+			keyboardController.Press(Convert.ToInt16("s"));
+			keyboardController.Press(Convert.ToInt16("t"));
 			Application.DoEvents();
 			Assert.AreEqual("Value", textBox.Text);
 			keyboardController.Dispose();
@@ -373,16 +375,16 @@ namespace WeSay.UI.Tests
 			Application.DoEvents();
 
 			j = comboBox.Length;
-			keyboardController.Press("{DOWN}");
+			keyboardController.Press(Convert.ToInt16("{DOWN}"));
 			Application.DoEvents();
-			keyboardController.Release("{DOWN}");
+			keyboardController.Release(Convert.ToInt16("{DOWN}"));
 			Application.DoEvents();
 			value = (String)comboBox.SelectedItem;
 			Assert.AreEqual(3, j);
 			Assert.AreEqual("Saab", value);
-			keyboardController.Press("{DOWN}");
+			keyboardController.Press(Convert.ToInt16("{DOWN}"));
 			Application.DoEvents();
-			keyboardController.Release("{DOWN}");
+			keyboardController.Release(Convert.ToInt16("{DOWN}"));
 			Application.DoEvents();
 			value = (String)comboBox.SelectedItem;
 			Application.DoEvents();

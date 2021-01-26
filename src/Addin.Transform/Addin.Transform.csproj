@@ -15,6 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.13.7" />
+
     <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
     <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
     <PackageReference Include="SIL.DictionaryServices" Version="8.0.0-beta0258" />

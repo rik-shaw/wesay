@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace WeSay.Project.Tests
 {
 	[TestFixture]
-	[Ignore]
+//	[Ignore]
 	public class WeSayWordsProjectLockingTests
 	{
 		//        private WeSayWordsProject _p;

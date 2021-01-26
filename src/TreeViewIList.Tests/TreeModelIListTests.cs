@@ -34,8 +34,8 @@ namespace WeSay.TreeViewIList.Tests
 		//    this.BuildTreeModelInterface();
 		//}
 
-		[TestFixtureSetUp]
-		public void TestFixtureSetUp()
+		[OneTimeSetUp]
+		public void OneTimeSetUp()
 		{
 			this.Configuration.ColumnTypes.Add(GLib.GType.String);
 			this.Configuration.GetValueStrategy = delegate(object o, int column)

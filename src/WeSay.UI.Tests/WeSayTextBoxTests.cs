@@ -7,6 +7,9 @@ using WeSay.UI.TextBoxes;
 using System.Windows.Forms;
 using System.Drawing;
 
+using System.Text;
+using System.Threading;
+
 namespace WeSay.UI.Tests
 {
 	[TestFixture]
@@ -87,10 +90,10 @@ namespace WeSay.UI.Tests
 			TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 			KeyboardController keyboardController = new KeyboardController(t);
 			t.Properties.Focus();
-			keyboardController.Press("Test");
-			keyboardController.Press("e");
-			keyboardController.Press("s");
-			keyboardController.Press("t");
+			keyboardController.Press(Convert.ToInt16("Test"));
+			keyboardController.Press(Convert.ToInt16("e"));
+			keyboardController.Press(Convert.ToInt16("s"));
+			keyboardController.Press(Convert.ToInt16("t"));
 			Assert.IsTrue(textBox.Text.Equals("Testest"));
 			keyboardController.Dispose();
 

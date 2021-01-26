@@ -15,7 +15,9 @@ using SIL.DictionaryServices.Model;
 using SIL.DictionaryServices.Lift;
 using Mono.Addins;
 
-using ICSharpCode.SharpZipLib.Zip;
+/// using ICSharpCode.SharpZipLib.Zip;
+/// using Ionic.Zip;
+
 
 using SIL.i18n;
 using SIL.Lexicon;

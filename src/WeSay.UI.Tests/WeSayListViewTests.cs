@@ -49,8 +49,8 @@ namespace WeSay.UI.Tests
 					l.Select(0);
 					Rectangle r = l.Properties.GetItemRect(1);
 					mc.Click(r.Right + 1, r.Top + 1);
-					kc.Press("{DOWN}");
-					kc.Release("{DOWN}");
+					kc.Press(Convert.ToInt16("{DOWN}"));
+					kc.Release(Convert.ToInt16("{DOWN}"));
 				}
 			}
 			Assert.AreEqual(2, l.Properties.SelectedIndices[0]);

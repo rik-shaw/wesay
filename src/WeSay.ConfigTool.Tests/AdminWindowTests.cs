@@ -13,7 +13,7 @@ using WeSay.TestUtilities;
 
 namespace WeSay.ConfigTool.Tests
 {
-	[TestFixture, RequiresSTA]
+	[TestFixture, Apartment(ApartmentState.STA)]
 	public class AdminWindowTests: NUnitFormTest
 	{
 		private ConfigurationWindow _window;
@@ -229,7 +229,7 @@ namespace WeSay.ConfigTool.Tests
 	public class MoreAdminWindowTests
 	{
 
-		[Test, RequiresSTA]
+		[Test, Apartment(ApartmentState.STA)]
 		public void OpenProject_OpenedWithDirNameWhichDoesNotMatchProjectName_Opens()
 		{
 			using (var projectDir = new ProjectDirectorySetupForTesting(""))

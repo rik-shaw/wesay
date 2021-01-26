@@ -30,7 +30,7 @@ namespace WeSay.ConfigTool.Tests
 			SIL.Windows.Forms.Keyboarding.KeyboardController.Shutdown();
 		}
 
-		[Test, RequiresSTA]
+		[Test, Apartment(ApartmentState.STA)]
 		public void ProjectIsCreated()
 		{
 			using(TemporaryFolder f = new TemporaryFolder("ProjectIsCreatedTest") )

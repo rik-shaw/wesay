@@ -11,7 +11,7 @@ using WeSay.Project;
 
 namespace WeSay.ConfigTool.Tests
 {
-	[TestFixture, RequiresSTA]
+	[TestFixture, Apartment(ApartmentState.STA)]
 	public class InterfaceLanguageControl
 	{
 		private ConfigurationWindow _window;

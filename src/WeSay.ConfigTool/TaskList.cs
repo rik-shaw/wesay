@@ -2,6 +2,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using WeSay.UI;
+using WeSay.Project;
 
 namespace WeSay.Admin
 {
@@ -20,7 +21,7 @@ namespace WeSay.Admin
 			if (this.DesignMode)
 				return;
 
-			string path = Path.Combine(BasilProject.Project.ApplicationCommonDirectory, "taskInventory.xml");
+			string path = Path.Combine(BasilProject.ApplicationCommonDirectory, "taskInventory.xml");
 			XmlDocument doc = new XmlDocument();
 			doc.Load(path);
 
