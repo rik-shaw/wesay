@@ -12,6 +12,7 @@
     <Copyright>Copyright © 2010-2020 SIL International</Copyright>
     <OutputPath>../../output/$(Configuration)</OutputPath>
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +34,174 @@
     <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj" />
     <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj" />
     <ProjectReference Include="..\WeSay.UI\WeSay.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AddMissingInfo\MissingInfoControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MissingInfoControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AddPictures\AddPicturesControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddPicturesControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CongratulationsControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CongratulationsControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\Dash.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dash.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\DashboardButton.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashboardButton.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\DashboardButtonWithIcon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashboardButtonWithIcon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\DictionaryStatusControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DictionaryStatusControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\GroupHeader.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GroupHeader.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\ItemsToDoIndicator.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ItemsToDoIndicator.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\TaskIndicator.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TaskIndicator.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DictionaryBrowseAndEdit\ConfirmDelete.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmDelete.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DictionaryBrowseAndEdit\DictionaryControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DictionaryControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DictionaryBrowseAndEdit\SearchBoxControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearchBoxControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EntryHeaderView.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntryHeaderView.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EntryViewControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntryViewControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GatherBySemanticDomains\GatherBySemanticDomainsControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GatherBySemanticDomainsControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GatherByWordList\GatherWordListControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GatherWordListControl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AddMissingInfo\MissingInfoControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MissingInfoControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="AddPictures\AddPicturesControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AddPicturesControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CongratulationsControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CongratulationsControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\Dash.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Dash.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\DashboardButton.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DashboardButton.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\DashboardButtonWithIcon.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DashboardButtonWithIcon.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\DictionaryStatusControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DictionaryStatusControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\GroupHeader.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GroupHeader.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\ItemsToDoIndicator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ItemsToDoIndicator.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\TaskIndicator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TaskIndicator.resx</DependentUpon>
+    </Compile>
+    <Compile Update="DictionaryBrowseAndEdit\ConfirmDelete.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmDelete.resx</DependentUpon>
+    </Compile>
+    <Compile Update="DictionaryBrowseAndEdit\DictionaryControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DictionaryControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="DictionaryBrowseAndEdit\SearchBoxControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SearchBoxControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="EntryHeaderView.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EntryHeaderView.resx</DependentUpon>
+    </Compile>
+    <Compile Update="EntryViewControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EntryViewControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="GatherBySemanticDomains\GatherBySemanticDomainsControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GatherBySemanticDomainsControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="GatherByWordList\GatherWordListControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GatherWordListControl.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

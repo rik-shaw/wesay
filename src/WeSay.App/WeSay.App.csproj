@@ -14,6 +14,7 @@
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
     <ApplicationIcon>..\..\artwork\WeSay.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
