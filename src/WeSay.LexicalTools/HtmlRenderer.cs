@@ -12,6 +12,7 @@ using WeSay.LexicalModel;
 using WeSay.LexicalModel.Foundation;
 using WeSay.Project;
 using WeSay.UI;
+#pragma warning disable 612
 
 namespace WeSay.LexicalTools
 {

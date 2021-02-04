@@ -33,7 +33,7 @@ namespace WeSay.LexicalTools.GatherBySemanticDomains
 		public const string DomainIndexTaskMemoryKey = "DomainIndex";
 		///rik making public for tests
 		public const string QuestionIndexTaskMemoryKey= "QuestionIndex";
-		private readonly string _semanticDomainQuestionsFileName;
+		//rik-notused private readonly string _semanticDomainQuestionsFileName;
 		private GatherBySemanticDomainsControl _gatherControl;
 		private Dictionary<string, List<string>> _domainQuestions;
 		private List<string> _domainKeys;

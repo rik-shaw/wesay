@@ -11,6 +11,7 @@ using Gecko.Events;
 using SIL.WritingSystems;
 using SIL.Text;
 using WeSay.LexicalModel.Foundation;
+#pragma warning disable 618
 
 namespace WeSay.UI.TextBoxes
 {

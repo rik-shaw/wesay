@@ -14,7 +14,7 @@ namespace WeSay.UI.Tests
 	[TestFixture]
 	public class WeSayTextBoxTests ///rik : NUnitFormTest
 	{
-		private Form _window;
+		//rik-notused private Form _window;
 
 		[SetUp]
 		public void Setup()

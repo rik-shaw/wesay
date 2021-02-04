@@ -8,9 +8,9 @@ namespace WeSay.UI.Tests
 	[TestFixture]
 	public class WeSayListViewTests ///rik : NUnitFormTest
 	{
-		private Form _window;
-		private WeSayListView _listView;
-		private List<string> _entries;
+		//rik-notused private Form _window;
+		//rik-notused private WeSayListView _listView;
+		//rik-notused private List<string> _entries;
 
 		public void Setup()
 		{

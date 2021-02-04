@@ -587,7 +587,7 @@ namespace WeSay.App
 
 		public static void ShowHelpTopic(string topicLink)
 		{
-			string helpFilePath = FileLocator.GetFileDistributedWithApplication("WeSay_Helps.chm");
+			string helpFilePath = FileLocationUtilities.GetFileDistributedWithApplication("WeSay_Helps.chm");
 			if (File.Exists(helpFilePath))
 			{
 				//var uri = new Uri(helpFilePath);

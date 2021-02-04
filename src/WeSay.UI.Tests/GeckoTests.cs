@@ -50,8 +50,8 @@ namespace WeSay.UI.Tests
 		public void Setup()
 		{
 			// base.OneTimeSetUp();
-			// _window = new Form();
-			// _window.Size = new Size(500, 500);
+			_window = new Form();
+			_window.Size = new Size(500, 500);
 		}
 
 		[TearDown]
@@ -347,8 +347,8 @@ namespace WeSay.UI.Tests
 			//try
 			//{
 
-			int j = 0;
-			String value = "";
+			//rik-notused int j = 0;
+			//rik-notused String value = "";
 			WritingSystemDefinition ws = new WritingSystemDefinition("fr");
 			var comboBox = new GeckoComboBox();
 			comboBox.WritingSystem = ws;
@@ -445,7 +445,7 @@ namespace WeSay.UI.Tests
 					if (!librarySearchPath.Contains(xulRunnerLocation))
 						throw new ApplicationException("LD_LIBRARY_PATH must contain " + xulRunnerLocation);
 #else
-					string xulRunnerLocation = Path.Combine(FileLocator.DirectoryOfTheApplicationExecutable, "Firefox");
+					string xulRunnerLocation = Path.Combine(FileLocationUtilities.DirectoryOfTheApplicationExecutable, "Firefox");
 					if (!Directory.Exists(xulRunnerLocation))
 					{
 						throw new ApplicationException("XULRunner needs to be installed to " + xulRunnerLocation);

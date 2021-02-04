@@ -30,9 +30,9 @@ namespace WeSay.LexicalTools.AddPictures
 			var collection = _presentationModel.ImageCollection;
 			if (!string.IsNullOrEmpty(_searchWords.Text))
 			{
-				bool foundExactMatches;
-				///rik IEnumerable<object> results = collection.GetMatchingPictures(_searchWords.Text, out foundExactMatches);
-				///rik _thumbnailViewer.LoadItems(collection.GetPathsFromResults(results, true));
+				//rik-notused bool foundExactMatches;
+				//rik IEnumerable<object> results = collection.GetMatchingPictures(_searchWords.Text, out foundExactMatches);
+				//rik _thumbnailViewer.LoadItems(collection.GetPathsFromResults(results, true));
 			}
 		}
 	}

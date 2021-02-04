@@ -107,7 +107,7 @@ namespace WeSay.LexicalModel.Tests.Foundation.Options
 		                </option>
                  </optionsList>");
 
-            OptionsList list = Load(path); 
+            OptionsList list = Load(path);
             File.Delete(path);
             Assert.AreEqual("verb", list.Options[0].Key);
             Assert.AreEqual("verb", list.Options[0].Name.GetBestAlternative("en"));
@@ -166,7 +166,7 @@ namespace WeSay.LexicalModel.Tests.Foundation.Options
 </options>
                  </optionsList>");
 
-            OptionsList list = Load(path); 
+            OptionsList list = Load(path);
             File.Delete(path);
             Assert.AreEqual("verb", list.Options[0].Key);
             Assert.AreEqual("verb", list.Options[0].Name.GetBestAlternative("en"));
@@ -198,7 +198,7 @@ namespace WeSay.LexicalModel.Tests.Foundation.Options
         //                </optionsList>");
         //
         //            Assert.AreEqual("verb", list.Options[0].Name.GetBestAlternative("en"));
-        //            
+        //
         //        }
 
         //        [Test]
@@ -212,7 +212,7 @@ namespace WeSay.LexicalModel.Tests.Foundation.Options
         //
         //
         //            System.Xml.Serialization.XmlSerializer serializer = new XmlSerializer(typeof (OptionsList), overrides);
-        //            
+        //
         //            Option x = new Option();
         //            x.Abbreviation.SetAlternative("a", "aabrev");
         //            x.Abbreviation.SetAlternative("b", "babrev");

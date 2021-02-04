@@ -29,7 +29,7 @@
 //    4. That no contributor to the Software will be liable for any of those types
 //    of damages known as indirect, special, consequential, or incidental
 //    related to the Software or this license, to the maximum extent the law
-//    permits, no matter what legal theory it’s based on. Also, you must pass
+//    permits, no matter what legal theory itï¿½s based on. Also, you must pass
 //    this limitation of liability on whenever you distribute the Software or
 //    derivative works.
 //    5. That if you sue anyone over patents that you think may apply to the
@@ -46,7 +46,7 @@
 //    pursuant to a solicitation issued on or after December 1, 1995, is
 //    provided with the commercial license rights set forth in this license,
 //    and (ii) Software provided pursuant to a solicitation issued prior to
-//    December 1, 1995, is provided with “Restricted Rights” as set forth in
+//    December 1, 1995, is provided with ï¿½Restricted Rightsï¿½ as set forth in
 //    FAR, 48 C.F.R. 52.227-14 (June 1987) or DFAR, 48 C.F.R. 252.227-7013
 //    (Oct 1988), as applicable.
 //    9. That your rights under this License end automatically if you breach it in

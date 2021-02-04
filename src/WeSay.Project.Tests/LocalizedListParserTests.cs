@@ -5,6 +5,7 @@ using NUnit.Framework;
 using SIL.Reporting;
 using SIL.TestUtilities;
 using WeSay.Project.LocalizedList;
+#pragma warning disable 618
 
 namespace WeSay.Project.Tests
 {

@@ -20,6 +20,7 @@ using WeSay.LexicalTools.AddMissingInfo;
 using WeSay.Project.ConfigMigration.WeSayConfig;
 using WeSay.Project.Tests.ConfigMigration.WritingSystem;
 using WeSay.TestUtilities;
+#pragma warning disable 618
 
 namespace WeSay.Project.Tests
 {

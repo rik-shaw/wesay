@@ -340,7 +340,7 @@ namespace WeSay.Data.Tests
 		}
 
 		///rik
-		
+
 		// [Test]
 		// [NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (NotSupportedException))]
 		// public new void SetItem()
