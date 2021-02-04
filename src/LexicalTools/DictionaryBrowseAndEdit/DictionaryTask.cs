@@ -9,7 +9,7 @@ using WeSay.Foundation;
 using WeSay.LexicalModel;
 using WeSay.Project;
 using WeSay.UI;
-
+using WeSay.LexicalTools.Properties;
 
 /* todo
  *

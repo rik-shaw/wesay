@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using SIL.WritingSystems;
 using WeSay.UI;
 using WeSay.UI.AutoCompleteTextBox;
+using WeSay.LexicalTools.Properties;
 
 namespace WeSay.LexicalTools.DictionaryBrowseAndEdit
 {
