@@ -154,23 +154,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="Resources\Add18x16.png" />
-    <None Include="Resources\AddWord.png" />
-    <None Include="Resources\blueDictionary.png" />
-    <None Include="Resources\blueWeSay.png" />
-    <None Include="Resources\calendar.png" />
-    <None Include="Resources\delete-word-bw.png" />
-    <None Include="Resources\delete-word.png" />
-    <None Include="Resources\DeleteIconBW.bmp" />
-    <None Include="Resources\HistoryOrange.png" />
-    <None Include="Resources\left-arrow.png" />
-    <None Include="Resources\noteBrowser32x32.png" />
-    <None Include="Resources\notesBrowser.svg" />
-    <None Include="Resources\plus.png" />
-    <None Include="Resources\right-arrow.png" />
-    <None Include="Resources\search18x18.png" />
-    <None Include="Resources\WeSay64x64.png" />
-  </ItemGroup>
-
 </Project>
