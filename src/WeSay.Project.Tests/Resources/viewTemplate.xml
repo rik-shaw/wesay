@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <viewTemplate id="defaultviewTemplate" class="WeSay.UI.viewTemplate" assembly="WeSay.UI">
   <fields>
-	<field class="WeSay.LexicalModel.Field" assembly="WeSay.LexicalModel">
+	<field class="WeSay.WeSay.LexicalModel.Field" assembly="WeSay.WeSay.LexicalModel">
 	  <className>LexEntry</className>
 	  <fieldName>EntryLexicalForm</fieldName>
 	  <displayName>Word</displayName>
@@ -12,7 +12,7 @@
 		  <id>yy</id>
 	   </writingSystems>
 	</field>
-	<field class="WeSay.LexicalModel.Field" assembly="WeSay.LexicalModel">
+	<field class="WeSay.WeSay.LexicalModel.Field" assembly="WeSay.WeSay.LexicalModel">
 	  <className>LexSense</className>
 	  <fieldName>gloss</fieldName>
 	  <visibility>Invisible</visibility>

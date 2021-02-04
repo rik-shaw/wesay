@@ -88,7 +88,7 @@ namespace WeSay.Project.Tests {
 		///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 		///&lt;viewTemplate id=&quot;defaultviewTemplate&quot; class=&quot;WeSay.UI.viewTemplate&quot; assembly=&quot;WeSay.UI&quot;&gt;
 		///  &lt;fields&gt;
-		///    &lt;field class=&quot;WeSay.LexicalModel.Field&quot; assembly=&quot;WeSay.LexicalModel&quot;&gt;
+		///    &lt;field class=&quot;WeSay.WeSay.LexicalModel.Field&quot; assembly=&quot;WeSay.WeSay.LexicalModel&quot;&gt;
 		///      &lt;className&gt;LexEntry&lt;/className&gt;
 		///      &lt;fieldName&gt;EntryLexicalForm&lt;/fieldName&gt;
 		///      &lt;displayName&gt;Word&lt;/displayName&gt;

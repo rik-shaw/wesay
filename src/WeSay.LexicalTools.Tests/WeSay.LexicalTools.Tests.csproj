@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <RootNamespace>LexicalTools.Tests</RootNamespace>
+    <RootNamespace>WeSay.LexicalTools.Tests</RootNamespace>
     <Configurations>Debug;Release</Configurations>
     <Description>WeSay LexicalTools.Tests</Description>
     <Company>SIL International</Company>
@@ -37,8 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LexicalModel.Tests\LexicalModel.Tests.csproj" />
-    <ProjectReference Include="..\LexicalModel\LexicalModel.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalModel.Tests\WeSay.LexicalModel.Tests.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalModel\WeSay.LexicalModel.csproj" />
     <ProjectReference Include="..\WeSay.LexicalTools\WeSay.LexicalTools.csproj" />
     <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj" />
     <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj" />

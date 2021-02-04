@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <RootNamespace>LexicalModel</RootNamespace>
-    <AssemblyName>LexicalModel</AssemblyName>
+    <RootNamespace>WeSay.LexicalModel</RootNamespace>
     <Configurations>Debug;Release</Configurations>
     <Description>WeSay LexicalModel</Description>
     <Company>SIL International</Company>
@@ -21,6 +20,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <IncludeSymbols>true</IncludeSymbols>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <PackageId>WeSay.LexicalModel</PackageId>
 
   </PropertyGroup>
 

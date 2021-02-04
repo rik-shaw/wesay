@@ -47,7 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LexicalModel\LexicalModel.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalModel\WeSay.LexicalModel.csproj" />
     <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj" />
   </ItemGroup>
 

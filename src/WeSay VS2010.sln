@@ -26,14 +26,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.App", "WeSay.App\WeSa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addin.Transform.Tests", "Addin.Transform.Tests\Addin.Transform.Tests.csproj", "{19310CA3-6653-45E0-9EC8-F824629E2AD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexicalModel", "LexicalModel\LexicalModel.csproj", "{5F61C809-B6C0-4567-9603-B2198E1AD038}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.LexicalModel", "WeSay.LexicalModel\WeSay.LexicalModel.csproj", "{5F61C809-B6C0-4567-9603-B2198E1AD038}"
 	ProjectSection(ProjectDependencies) = postProject
 		{600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD} = {600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.AddinLib.Tests", "WeSay.AddinLib.Tests\WeSay.AddinLib.Tests.csproj", "{74DF4C01-660C-4CF4-9343-9330337BCBEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexicalModel.Tests", "LexicalModel.Tests\LexicalModel.Tests.csproj", "{123D695C-0D5D-46E5-893F-39EC4E0B01B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.LexicalModel.Tests", "WeSay.LexicalModel.Tests\WeSay.LexicalModel.Tests.csproj", "{123D695C-0D5D-46E5-893F-39EC4E0B01B8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD} = {600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD}
 	EndProjectSection

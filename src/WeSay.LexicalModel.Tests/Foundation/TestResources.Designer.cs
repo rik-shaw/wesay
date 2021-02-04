@@ -39,7 +39,7 @@ namespace WeSay.LexicalModel.Tests.Foundation {
 		internal static global::System.Resources.ResourceManager ResourceManager {
 			get {
 				if (object.ReferenceEquals(resourceMan, null)) {
-					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WeSay.LexicalModel.Tests.Foundation.TestResources", typeof(TestResources).Assembly);
+					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WeSay.WeSay.WeSay.LexicalModel.Tests.Foundation.TestResources", typeof(TestResources).Assembly);
 					resourceMan = temp;
 				}
 				return resourceMan;

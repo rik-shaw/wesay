@@ -10,7 +10,7 @@ using NUnit.Framework;
 using NUnit.Extensions.Forms;
 using SIL.WritingSystems;
 using SIL.IO;
-using WeSay.LexicalModel.Foundation;
+using WeSay.WeSay.LexicalModel.Foundation;
 using WeSay.UI.TextBoxes;
 using Gecko;
 

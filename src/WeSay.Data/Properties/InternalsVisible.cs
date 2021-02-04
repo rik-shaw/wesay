@@ -5,4 +5,4 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
 [assembly: InternalsVisibleTo("WeSay.Data.Tests")]
-[assembly: InternalsVisibleTo("LexicalModel.Tests")]
+[assembly: InternalsVisibleTo("WeSay.WeSay.LexicalModel.Tests")]

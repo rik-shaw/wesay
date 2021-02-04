@@ -65,7 +65,7 @@
   </task>
   <task id="AddMeanings" class="WeSay.WeSay.LexicalTools.LexFieldTask" assembly="WeSay.LexicalTools" default="true">
 	<entries ref="All Entries" />
-	<filter class="WeSay.LexicalModel.MissingGlossFilter" assembly="LexicalModel">
+	<filter class="WeSay.WeSay.LexicalModel.MissingGlossFilter" assembly="WeSay.LexicalModel">
 	  <viewTemplate ref="Default View Template"/>
 	</filter>
 	<label>Add Meanings</label>

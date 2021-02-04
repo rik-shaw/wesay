@@ -6,7 +6,7 @@
 //using System.Xml;
 //using NUnit.Framework;
 //using WeSay.Data;
-//using WeSay.LexicalModel;
+//using WeSay.WeSay.LexicalModel;
 
 //namespace WeSay.Project.Tests
 //{

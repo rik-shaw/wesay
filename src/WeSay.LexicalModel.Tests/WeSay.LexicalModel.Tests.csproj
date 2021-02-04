@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <RootNamespace>LexicalModel.Tests</RootNamespace>
-    <AssemblyName>LexicalModel.Tests</AssemblyName>
+    <RootNamespace>WeSay.LexicalModel.Tests</RootNamespace>
     <Configurations>Debug;Release</Configurations>
     <Description>WeSay LexicalModel.Tests</Description>
     <Company>SIL International</Company>
@@ -13,6 +12,7 @@
     <OutputPath>../../output/$(Configuration)</OutputPath>
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
     <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>WeSay.LexicalModel.Tests</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LexicalModel\LexicalModel.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalModel\WeSay.LexicalModel.csproj" />
     <ProjectReference Include="..\WeSay.Data.Tests\WeSay.Data.Tests.csproj" />
     <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj" />
     <ProjectReference Include="..\WeSay.Project.Tests\WeSay.Project.Tests.csproj" />
