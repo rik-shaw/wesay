@@ -35,7 +35,7 @@ namespace WeSay.LexicalModel.Tests
 		public void TearDown()
 		{
 			_lexEntryRepository.Dispose();
-			_temporaryFolder.Delete();
+			_temporaryFolder.Dispose();
 			Sldr.Cleanup();
 		}
 

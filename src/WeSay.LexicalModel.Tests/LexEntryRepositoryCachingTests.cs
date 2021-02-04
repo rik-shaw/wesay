@@ -20,8 +20,8 @@ namespace WeSay.LexicalModel.Tests
 		public void Setup()
 		{
 			Sldr.Initialize(true);
-			_tempfolder = new TemporaryFolder();
-			string persistedFilePath = _tempfolder.GetTemporaryFile();
+			_tempfolder = new TemporaryFolder("LexEntryRepositoryCachingTests");
+			string persistedFilePath = _tempfolder.GetPathForNewTempFile(true);
 			_repository = new LexEntryRepository(persistedFilePath);
 		}
 

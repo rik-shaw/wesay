@@ -26,8 +26,8 @@ namespace WeSay.LexicalModel.Tests
 			{
 				DefaultCollation = new IcuRulesCollationDefinition("standard")
 			};
-			_temporaryFolder = new TemporaryFolder();
-			string filePath = _temporaryFolder.GetTemporaryFile();
+			_temporaryFolder = new TemporaryFolder("GetMissingItemsTests");
+			string filePath = _temporaryFolder.GetPathForNewTempFile(true);
 			_lexEntryRepository = new LexEntryRepository(filePath);
 		}
 
@@ -35,7 +35,7 @@ namespace WeSay.LexicalModel.Tests
 		public void TearDown()
 		{
 			_lexEntryRepository.Dispose();
-			_temporaryFolder.Delete();
+			_temporaryFolder.Dispose();
 			Sldr.Cleanup();
 		}
 
@@ -239,8 +239,8 @@ namespace WeSay.LexicalModel.Tests
 
 			public TestEnvironment()
 			{
-				_temporaryFolder = new TemporaryFolder();
-				string filePath = _temporaryFolder.GetTemporaryFile();
+				_temporaryFolder = new TemporaryFolder("GetMissingItemsTests");
+				string filePath = _temporaryFolder.GetPathForNewTempFile(true);
 				_repository = new LexEntryRepository(filePath);
 			}
 
@@ -278,7 +278,7 @@ namespace WeSay.LexicalModel.Tests
 			public void Dispose()
 			{
 				_repository.Dispose();
-				_temporaryFolder.Delete();
+				_temporaryFolder.Dispose();
 			}
 		}
 

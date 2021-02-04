@@ -38,8 +38,8 @@ namespace WeSay.LexicalTools.Tests
 		[SetUp]
 		public void Setup()
 		{
-			_tempFolder = new TemporaryFolder();
-			_filePath = _tempFolder.GetTemporaryFile();
+			_tempFolder = new TemporaryFolder("DictionaryTaskTests");
+			_filePath = _tempFolder.GetPathForNewTempFile(true);
 
 			WeSayProjectTestHelper.InitializeForTests();
 			string[] vernacularWritingSystemIds = new string[]

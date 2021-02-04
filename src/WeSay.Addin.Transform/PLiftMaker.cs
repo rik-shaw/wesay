@@ -33,7 +33,7 @@ namespace Addin.Transform
 				exporter.ExportOptions = Options;
 
 				ResultSet<LexEntry> recordTokens =
-					lexEntryRepository.GetAllEntriesSortedByHeadword(template.HeadwordWritingSystem);
+					lexEntryRepository.GetAllEntriesSortedByHeadword(template.HeadwordWritingSystems[0]);
 				foreach (RecordToken<LexEntry> token in recordTokens)
 				{
 					int homographNumber = 0;

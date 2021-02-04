@@ -55,7 +55,7 @@ namespace WeSay.LexicalTools.Tests
 			{
 				_lexEntryRepository.Dispose();
 			}
-			_tempFolder.Delete();
+			_tempFolder.Dispose();
 			Sldr.Cleanup();
 		}
 
@@ -95,8 +95,8 @@ namespace WeSay.LexicalTools.Tests
 		private void SetupTestData()
 		{
 			ErrorReport.IsOkToInteractWithUser = false;
-			_tempFolder = new TemporaryFolder();
-			_filePath = _tempFolder.GetTemporaryFile();
+			_tempFolder = new TemporaryFolder("HtmlRendererTests");
+			_filePath = _tempFolder.GetPathForNewTempFile(true);
 
 			_currentItem = null;
 			string lexicalForm = "test";
@@ -111,7 +111,7 @@ namespace WeSay.LexicalTools.Tests
 			List<String> headwordWritingSystemIds = new List<string>(_viewTemplate.GetHeadwordWritingSystemIds());
 			string wsA = headwordWritingSystemIds[0] ;
 			string wsB = _viewTemplate.GetDefaultWritingSystemForField(definition).LanguageTag;
-			HtmlRenderer.HeadWordWritingSystemId = _viewTemplate.HeadwordWritingSystem.LanguageTag;
+			HtmlRenderer.HeadWordWritingSystemId = _viewTemplate.HeadwordWritingSystems[0].LanguageTag;
 
 			_entry = _lexEntryRepository.CreateItem();
 			_entry.LexicalForm[wsA] = lexicalForm;

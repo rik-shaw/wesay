@@ -31,7 +31,7 @@ namespace WeSay.LexicalTools.Tests
 		private string _glossingLanguageWSId;
 		private string _vernacularLanguageWSId;
 		private WordListCatalog _catalog;
-		private TempLiftFile _liftWordListFile;
+		// private TempLiftFile _liftWordListFile;
 
 		[SetUp]
 		public void Setup()
@@ -41,10 +41,10 @@ namespace WeSay.LexicalTools.Tests
 			_vernacularLanguageWSId = WritingSystemsIdsForTests.VernacularIdForTest;
 			BasilProject.Project.WritingSystems.Set(new WritingSystemDefinition("fr"));
 
-			_tempFolder = new TemporaryFolder();
-			_simpleWordListFilePath = _tempFolder.GetTemporaryFile();
+			_tempFolder = new TemporaryFolder("GatherWordListTaskTests");
+			_simpleWordListFilePath = _tempFolder.GetPathForNewTempFile(true);
 //            _liftWordListFile = new TempLiftFile("wordlist.lift",_tempFolder, LiftXml, LiftIO.Validation.Validator.LiftVersion);
-			_filePath = _tempFolder.GetTemporaryFile();
+			_filePath = _tempFolder.GetPathForNewTempFile(true);
 
 			_lexEntryRepository = new LexEntryRepository(_filePath); // InMemoryRecordListManager();
 			File.WriteAllLines(_simpleWordListFilePath, _words);
@@ -141,7 +141,7 @@ namespace WeSay.LexicalTools.Tests
 			}
 			if (_tempFolder != null)
 			{
-				_tempFolder.Delete();
+				_tempFolder.Dispose();
 			}
 			WeSayProjectTestHelper.CleanupForTests();
 		}

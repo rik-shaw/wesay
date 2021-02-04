@@ -20,6 +20,7 @@ using WeSay.LexicalTools;
 using WeSay.Project;
 using WeSay.UI;
 using Gecko;
+using SIL.Windows.Forms.Reporting;
 
 namespace WeSay.App
 {
@@ -326,8 +327,8 @@ namespace WeSay.App
 #endif
 
 			   RtfRenderer.HeadWordWritingSystemId =
-				   _project.DefaultViewTemplate.HeadwordWritingSystem.LanguageTag;
-			   HtmlRenderer.HeadWordWritingSystemId = _project.DefaultViewTemplate.HeadwordWritingSystem.LanguageTag;
+				   _project.DefaultViewTemplate.HeadwordWritingSystems[0].LanguageTag;
+			   HtmlRenderer.HeadWordWritingSystemId = _project.DefaultViewTemplate.HeadwordWritingSystems[0].LanguageTag;
 
 #if __MonoCS__
 				UglyHackForXkbIndicator();
@@ -540,7 +541,7 @@ namespace WeSay.App
 				ErrorReport.AddProperty("ProjectPath", BasilProject.Project.ProjectDirectoryPath);
 			}
 			ErrorReport.AddStandardProperties();
-			ExceptionHandler.Init();
+			ExceptionHandler.Init(new WinFormsExceptionHandler());
 		}
 
 		private class CommandLineArguments

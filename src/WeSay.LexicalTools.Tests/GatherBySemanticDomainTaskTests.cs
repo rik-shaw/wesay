@@ -1,25 +1,20 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using Autofac;
-using Microsoft.Practices.ServiceLocation;
 using SIL.DictionaryServices.Model;
 using SIL.Lift;
 using SIL.Reporting;
 using SIL.TestUtilities;
 using SIL.WritingSystems;
 using WeSay.LexicalModel;
-using WeSay.LexicalModel.Foundation;
 using WeSay.LexicalTools.GatherBySemanticDomains;
 using WeSay.Project;
-using WeSay.Project.LocalizedList;
 using SIL.Lift.Options;
 
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using WeSay.TestUtilities;
+#pragma warning disable 618
 
 namespace WeSay.LexicalTools.Tests
 {
@@ -52,9 +47,9 @@ namespace WeSay.LexicalTools.Tests
 			WeSayProjectTestHelper.InitializeForTests();
 
 			WeSayWordsProject.Project.RemoveCache();
-			_tempFolder = new TemporaryFolder();
-			_filePath = _tempFolder.GetTemporaryFile();
-			_semanticDomainFilePath = _tempFolder.GetTemporaryFile();
+			_tempFolder = new TemporaryFolder("GatherBySemanticDomainTaskTests");
+			_filePath = _tempFolder.GetPathForNewTempFile(true);
+			_semanticDomainFilePath = _tempFolder.GetPathForNewTempFile(true);
 
 			_lexEntryRepository = new LexEntryRepository(_filePath);
 			_viewTemplate = MakeViewTemplate("en");
@@ -125,7 +120,7 @@ namespace WeSay.LexicalTools.Tests
 			}
 			if (_tempFolder != null)
 			{
-				_tempFolder.Delete();
+				_tempFolder.Dispose();
 			}
 			WeSayProjectTestHelper.CleanupForTests();
 		}
