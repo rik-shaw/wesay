@@ -21,50 +21,50 @@ namespace WeSay.Project
 			RegisterTask(builder, "Dashboard",
 						 "WeSay.LexicalTools.Dashboard.Dash",
 						 "WeSay.LexicalTools.Dashboard.DashboardConfiguration",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 			RegisterTask(builder, "Dictionary",
 						 "WeSay.LexicalTools.DictionaryBrowseAndEdit.DictionaryTask",
 						 "WeSay.LexicalTools.DictionaryBrowseAndEdit.DictionaryBrowseAndEditConfiguration",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 
 			RegisterControlAndFactory(builder,
 						"WeSay.LexicalTools.DictionaryBrowseAndEdit.DictionaryControl",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 
 			RegisterControlAndFactory(builder,
 						"WeSay.LexicalTools.EntryHeaderView",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 
 			RegisterControlAndFactory(builder,
 						"WeSay.LexicalTools.EntryViewControl",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 
 			//builder.Register<ITaskForExternalNavigateToEntry>(c => (ITaskForExternalNavigateToEntry) c.Resolve("Dictionary"));
 
 			RegisterTask(builder, "GatherWordsBySemanticDomains",
 						 "WeSay.LexicalTools.GatherBySemanticDomains.GatherBySemanticDomainTask",
 						 "WeSay.LexicalTools.GatherBySemanticDomains.GatherBySemanticDomainConfig",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 			RegisterTask(builder, "AddMissingInfo",
 						 "WeSay.LexicalTools.AddMissingInfo.MissingInfoTask",
 						 "WeSay.LexicalTools.AddMissingInfo.MissingInfoConfiguration",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 			RegisterTask(builder, "GatherWordList",
 						 "WeSay.LexicalTools.GatherByWordList.GatherWordListTask",
 						 "WeSay.LexicalTools.GatherByWordList.GatherWordListConfig",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 			RegisterTask(builder, "AdvancedHistory",
 						 "WeSay.LexicalTools.Review.AdvancedHistory.AdvancedHistoryTask",
 						 "WeSay.LexicalTools.Review.AdvancedHistory.AdvancedHistoryConfig",
-						 "LexicalTools");
+						 "WeSay.LexicalTools");
 
 			RegisterTask(builder, "NotesBrowser",
 				 "WeSay.LexicalTools.Review.NotesBrowser.NotesBrowserTask",
 				 "WeSay.LexicalTools.Review.NotesBrowser.NotesBrowserConfig",
-				 "LexicalTools");
+				 "WeSay.LexicalTools");
 
-			Type type = GetType("WeSay.LexicalTools.DictionaryBrowseAndEdit.ConfirmDelete", "LexicalTools");
-			Type typeInterface = GetType("WeSay.LexicalTools.IConfirmDelete", "LexicalTools");
+			Type type = GetType("WeSay.LexicalTools.DictionaryBrowseAndEdit.ConfirmDelete", "WeSay.LexicalTools");
+			Type typeInterface = GetType("WeSay.LexicalTools.IConfirmDelete", "WeSay.LexicalTools");
 			builder.RegisterType(type).As(typeInterface).InstancePerDependency();
 
 //            Type type = GetType( "WeSay.LexicalTools.Review.AdvancedHistory.AdvancedHistoryControl", assembly);

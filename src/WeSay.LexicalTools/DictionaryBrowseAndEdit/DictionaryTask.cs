@@ -14,7 +14,7 @@ using WeSay.LexicalTools.Properties;
 /* todo
  *
  * handle:
- *     <filter class="WeSay.LexicalTools.MissingItemFilter" assembly="LexicalTools">
+ *     <filter class="WeSay.LexicalTools.MissingItemFilter" assembly="WeSay.LexicalTools">
 		<viewTemplate ref="Default View Template" />
 		<field>POS</field>
 	  </filter>

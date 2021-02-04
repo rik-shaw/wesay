@@ -27,7 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\LexicalModel.Tests\LexicalModel.Tests.csproj" />
     <ProjectReference Include="..\LexicalModel\LexicalModel.csproj" />
-    <ProjectReference Include="..\LexicalTools\LexicalTools.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalTools\WeSay.LexicalTools.csproj" />
     <ProjectReference Include="..\WeSay.App\WeSay.App.csproj" />
     <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj" />
     <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj" />

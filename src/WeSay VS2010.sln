@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.Project", "WeSay.Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.UI.Tests", "WeSay.UI.Tests\WeSay.UI.Tests.csproj", "{6AED6785-CC6F-4A6A-BDB1-1895C6DA1090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexicalTools", "LexicalTools\LexicalTools.csproj", "{87AF0B02-2983-486D-857F-D1859535C234}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.LexicalTools", "WeSay.LexicalTools\WeSay.LexicalTools.csproj", "{87AF0B02-2983-486D-857F-D1859535C234}"
 	ProjectSection(ProjectDependencies) = postProject
 		{600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD} = {600D0FD4-D189-41A0-9BC5-FC79AD2CF1CD}
 	EndProjectSection
@@ -52,7 +52,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDataProcessor", "Lift
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.App.Tests", "WeSay.App.Tests\WeSay.App.Tests.csproj", "{7DA57D98-255B-46DE-BF94-D163695A0568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexicalTools.Tests", "LexicalTools.Tests\LexicalTools.Tests.csproj", "{9936180C-90A7-467C-B761-EC184EFE1F9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.LexicalTools.Tests", "WeSay.LexicalTools.Tests\WeSay.LexicalTools.Tests.csproj", "{9936180C-90A7-467C-B761-EC184EFE1F9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeSay.TestUtilities", "WeSay.TestUtilities\WeSay.TestUtilities.csproj", "{FEC3014D-0067-4D59-A838-3B046EC3C352}"
 EndProject

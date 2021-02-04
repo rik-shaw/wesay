@@ -37,7 +37,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WeSay.UI\WeSay.UI.csproj" />
-    <ProjectReference Include="..\LexicalTools.Tests\LexicalTools.Tests.csproj" />
+    <ProjectReference Include="..\WeSay.LexicalTools.Tests\WeSay.LexicalTools.Tests.csproj" />
     <ProjectReference Include="..\WeSay.TestUtilities\WeSay.TestUtilities.csproj" />
   </ItemGroup>
 

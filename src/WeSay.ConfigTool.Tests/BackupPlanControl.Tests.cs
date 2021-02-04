@@ -46,7 +46,7 @@ namespace WeSay.ConfigTool.Tests
 
 		[Test, Apartment(ApartmentState.STA)]
 		[Platform(Exclude="Linux", Reason="does not close sync dialog on mono when run after AdminWindowTests")]
-		// Mar2017 Similar to issues with LexicalTools HtmlRenderTests with the progress dialog
+		// Mar2017 Similar to issues with WeSay.LexicalTools HtmlRenderTests with the progress dialog
 		// it looks like the background task isn't notifying that it has finished
 		public void SetValues_Reopen_HasSameValues()
 		{
