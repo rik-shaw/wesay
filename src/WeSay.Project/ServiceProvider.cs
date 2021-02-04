@@ -140,8 +140,8 @@ namespace WeSay.Project
 	/// </summary>
 	internal class ActivationException : Exception
 	{
-		public string Message { get; set; }
-		public Exception OriginalException { get; set; }
+		private new string Message { get; set; }
+		private Exception OriginalException { get; set; }
 
 		public ActivationException(string message, Exception ex)
 		{

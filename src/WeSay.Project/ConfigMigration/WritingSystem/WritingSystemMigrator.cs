@@ -116,7 +116,7 @@ namespace WeSay.Project.ConfigMigration.WritingSystem
 						}
 						xmlDoc.Save(filePath);
 					}
-					catch(Exception e)
+					catch(Exception error)
 					{
 						//Do nothing. If the load failed then it's not an optionlist.
 					}

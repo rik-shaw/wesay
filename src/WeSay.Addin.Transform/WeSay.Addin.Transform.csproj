@@ -2,10 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <RootNamespace>Addin.Backup</RootNamespace>
-    <AssemblyName>Addin.Backup</AssemblyName>
+    <RootNamespace>Addin.Transform</RootNamespace>
     <Configurations>Debug;Release</Configurations>
-    <Description>WeSay Addin.Backup</Description>
+    <Description>WeSay Addin.Transform</Description>
     <Company>SIL International</Company>
     <Authors>SIL International</Authors>
     <Product>WeSay</Product>
@@ -16,17 +15,22 @@
 
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
 
+    <PackageId>WeSay.Addin.Transform</PackageId>
+
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.3.1" />
 
-    <PackageReference Include="SIL.Chorus.LibChorus" Version="3.1.0-*" />
     <PackageReference Include="SIL.Core" Version="8.0.0-*" />
     <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-*" />
+    <PackageReference Include="SIL.DictionaryServices" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Lexicon" Version="8.0.0-*" />
     <PackageReference Include="SIL.Lift" Version="8.0.0-*" />
+    <PackageReference Include="SIL.TestUtilities" Version="8.0.0-*" />
     <PackageReference Include="SIL.Windows.Forms" Version="8.0.0-*" />
     <PackageReference Include="SIL.Windows.Forms.Keyboarding" Version="8.0.0-*" />
+    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-*" />
 
     <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
 
@@ -38,15 +42,20 @@
     <ProjectReference Include="..\WeSay.Data\WeSay.Data.csproj" />
     <ProjectReference Include="..\WeSay.Foundation\WeSay.Foundation.csproj" />
     <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj" />
-    <ProjectReference Include="..\WeSay.UI\WeSay.UI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Resources\buttonImage.png" />
-    <None Include="Resources\emailAction.png" />
-    <None Include="Resources\greenSynchronize.png" />
-    <None Include="Resources\greenEmail.png" />
-    <None Include="Resources\greenUsbKey.png" />
+    <None Include="app.config" />
+    <None Include="Resources\genericAction.png" />
+    <None Include="Resources\printAction.png" />
+    <None Include="Resources\toolbox.png" />
+    <None Include="Resources\wordExport.png" />
+    <None Include="Resources\greenPrinter.png" />
+    <None Include="Resources\pdfdictionary.png" />
+    <None Include="Resources\lexiquePro.bmp" />
+    <None Include="Resources\greenLexiquePro.png" />
+    <None Include="Resources\greenPdf.png" />
+    <None Include="Resources\greenPdfDictionary.png" />
   </ItemGroup>
 
 </Project>

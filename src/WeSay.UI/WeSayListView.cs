@@ -57,8 +57,8 @@ namespace WeSay.UI
 		private readonly Dictionary<int, ListViewItem> _itemsCache;
 
 		private bool _ensureVisibleCalledBeforeWindowHandleCreated = false;
-		public new event EventHandler<ListViewItemSelectionChangedEventArgs> ItemSelectionChanged;
-		public new event EventHandler<RetrieveVirtualItemEventArgs> RetrieveVirtualItem;
+		//rik-notused public new event EventHandler<ListViewItemSelectionChangedEventArgs> ItemSelectionChanged;
+		//rik-notused public new event EventHandler<RetrieveVirtualItemEventArgs> RetrieveVirtualItem;
 
 		public WeSayListView()
 		{

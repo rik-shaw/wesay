@@ -30,7 +30,7 @@ namespace WeSay.Project.ConfigMigration.WritingSystem
 			CustomICU
 		}
 		private readonly Font _fallBackFont = new Font(FontFamily.GenericSansSerif, 12);
-		private bool _isUnicode = true;
+		//rik-notused private bool _isUnicode = true;
 		private string _abbreviation;
 		private WritingSystemDefinition _silWritingSystemDefinition;
 

@@ -302,7 +302,7 @@ namespace Addin.Transform
 			{
 				return
 						Assembly.GetExecutingAssembly().GetManifestResourceStream(
-								"Addin.Transform." + xsltName);
+								"WeSay.Addin.Transform." + xsltName);
 			}
 			return File.OpenRead(xsltPath);
 		}

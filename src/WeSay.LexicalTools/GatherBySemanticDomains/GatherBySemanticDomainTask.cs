@@ -28,10 +28,10 @@ namespace WeSay.LexicalTools.GatherBySemanticDomains
 {
 	public class GatherBySemanticDomainTask: WordGatheringTaskBase
 	{
-		public ViewTemplate ViewTemplate { get; set; }
+		public new ViewTemplate ViewTemplate { get; set; }
 		///rik making public for tests
 		public const string DomainIndexTaskMemoryKey = "DomainIndex";
-		///rik making public for tests		
+		///rik making public for tests
 		public const string QuestionIndexTaskMemoryKey= "QuestionIndex";
 		private readonly string _semanticDomainQuestionsFileName;
 		private GatherBySemanticDomainsControl _gatherControl;

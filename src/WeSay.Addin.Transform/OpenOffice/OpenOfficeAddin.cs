@@ -424,7 +424,7 @@ namespace Addin.Transform.OpenOffice
 		public static Stream GetXsltStream(string xsltName)
 		{
 			Stream stream =
-					Assembly.GetExecutingAssembly().GetManifestResourceStream("Addin.Transform." +
+					Assembly.GetExecutingAssembly().GetManifestResourceStream("WeSay.Addin.Transform." +
 																			  xsltName);
 			Debug.Assert(stream != null);
 			return stream;

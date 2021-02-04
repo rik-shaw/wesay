@@ -51,7 +51,7 @@ namespace WeSay.UI.TextBoxes
 	public class WeSayComboBox : ComboBox, IWeSayComboBox
 	{
 		private WritingSystemDefinition _writingSystem;
-		public new event EventHandler<DrawItemEventArgs> DrawItem;
+		//rik-notused public new event EventHandler<DrawItemEventArgs> DrawItem;
 
 		public WritingSystemDefinition WritingSystem
 		{

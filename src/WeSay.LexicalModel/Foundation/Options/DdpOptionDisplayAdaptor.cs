@@ -4,7 +4,6 @@ using WeSay.LexicalModel.Foundation.Options;
 
 namespace WeSay.LexicalModel.Foundation.Options
 {
-	[CLSCompliant (false)]
 	public class DdpOptionDisplayAdaptor : OptionDisplayAdaptor
 	{
 		public DdpOptionDisplayAdaptor(OptionsList allOptions, string preferredWritingSystemId)

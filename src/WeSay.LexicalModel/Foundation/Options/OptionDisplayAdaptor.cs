@@ -7,7 +7,6 @@ using SIL.UiBindings;
 
 namespace WeSay.LexicalModel.Foundation.Options
 {
-	[CLSCompliant (false)]
 	public class OptionDisplayAdaptor: IChoiceSystemAdaptor<Option, string, OptionRef>
 	{
 		protected readonly OptionsList _allOptions;

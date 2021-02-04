@@ -23,11 +23,10 @@ namespace WeSay.App
 		private ITask _activeTask;
 		private TabPage _currentWorkTab;
 		private string _currentUrl;
-		public SynchronizationContext synchronizationContext;
+		private SynchronizationContext synchronizationContext;
 		//        private ProgressDialogHandler _progressHandler;
 
-		[CLSCompliant(false)]
-		public TabbedForm(
+		private TabbedForm(
 			StatusBarController statusBarController,
 			NavigateToRecordEvent navigateToRecordEventToSubscribeTo)
 		{

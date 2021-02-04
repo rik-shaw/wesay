@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <RootNamespace>Addin.Backup.Tests</RootNamespace>
-    <AssemblyName>Addin.Backup.Tests</AssemblyName>
     <Configurations>Debug;Release</Configurations>
     <Description>WeSay Addin.Backup.Tests</Description>
     <Company>SIL International</Company>
@@ -13,6 +12,7 @@
     <OutputPath>../../output/$(Configuration)</OutputPath>
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
     <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>WeSay.Addin.Backup.Tests</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Addin.Backup\Addin.Backup.csproj" />
+    <ProjectReference Include="..\WeSay.Addin.Backup\WeSay.Addin.Backup.csproj" />
     <ProjectReference Include="..\WeSay.Project\WeSay.Project.csproj" />
     <ProjectReference Include="..\WeSay.TestUtilities\WeSay.TestUtilities.csproj" />
   </ItemGroup>

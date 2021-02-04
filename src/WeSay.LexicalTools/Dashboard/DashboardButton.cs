@@ -18,13 +18,12 @@ namespace WeSay.LexicalTools.Dashboard
 		private bool _mouseInControl;
 		private bool _keyIsDown;
 		// default format flags for text rendering
-		[CLSCompliantAttribute(false)]
-		protected const TextFormatFlags _defaultTextFormatFlags =
+		private const TextFormatFlags _defaultTextFormatFlags =
 				TextFormatFlags.WordBreak | TextFormatFlags.NoFullWidthCharacterBreak |
 				TextFormatFlags.LeftAndRightPadding;
 
-		protected const int ShadowWidth = 3;
-		protected const int ButtonDownHorizontalNudge = ShadowWidth;
+		private const int ShadowWidth = 3;
+		private const int ButtonDownHorizontalNudge = ShadowWidth;
 		protected const int LeftMarginWidth = 8;
 		protected const int RightMarginWidth = 8 + ShadowWidth;
 		protected const int TopMarginWidth = 11;
@@ -79,14 +78,14 @@ namespace WeSay.LexicalTools.Dashboard
 		/// <param name="radius"></param>
 		/// <param name="lw"></param>
 		/// <returns></returns>
-		public static GraphicsPath RoundRect(int x, int y, int width, int height, int radius, int lw)
+		private static GraphicsPath RoundRect(int x, int y, int width, int height, int radius, int lw)
 				// x,y - top left corner of rounded rectangle
 				// width, height - width and height of round rect
 				// radius - radius for corners
 				// lw - line width (for Graphics.Pen)
 		{
-			GraphicsPath g = new GraphicsPath();
-			int diameter = radius * 2;
+			var g = new GraphicsPath();
+			var diameter = radius * 2;
 			g.AddArc(x + lw, y, diameter, diameter, 180, 90);
 			g.AddArc(x + (width - diameter - lw), y, diameter, diameter, 270, 90);
 			g.AddArc(x + (width - diameter - lw),
@@ -114,8 +113,8 @@ namespace WeSay.LexicalTools.Dashboard
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			int borderWidth = Focused ? 2 : 1;
-			int radius = 8;
+			var borderWidth = Focused ? 2 : 1;
+			var radius = 8;
 
 			//draw shadow
 			Rectangle rectangle;
@@ -147,7 +146,7 @@ namespace WeSay.LexicalTools.Dashboard
 				rectangle.Width -= 9;
 				rectangle.Height -= 8;
 				path = GetButtonShapePath(rectangle, radius, 1);
-				Pen p = new Pen(_borderColor, 1);
+				var p = new Pen(_borderColor, 1);
 				p.DashStyle = DashStyle.Dot;
 				e.Graphics.DrawPath(p, path);
 			}
@@ -172,17 +171,17 @@ namespace WeSay.LexicalTools.Dashboard
 
 		protected virtual void PaintContents(PaintEventArgs e)
 		{
-			int nudge = CurrentMouseButtonNudge;
+			var nudge = CurrentMouseButtonNudge;
 
-			int textBottom = ClientRectangle.Bottom - BottomMarginWidth;
-			int left = ClientRectangle.Left + LeftMarginWidth;
+			var textBottom = ClientRectangle.Bottom - BottomMarginWidth;
+			var left = ClientRectangle.Left + LeftMarginWidth;
 
 			if (HasProgressBar())
 			{
 				textBottom -= ProgressBarHeight + ProgressBarTopMargin;
 				PaintProgressBar(e.Graphics);
 			}
-			int textTop = ClientRectangle.Top + TopMarginWidth;
+			var textTop = ClientRectangle.Top + TopMarginWidth;
 			// +1 is to fix off-by-one of width = right-left+1
 			TextRenderer.DrawText(e.Graphics,
 								  Text,
@@ -197,37 +196,37 @@ namespace WeSay.LexicalTools.Dashboard
 
 		protected virtual void PaintProgressBar(Graphics graphics)
 		{
-			ITask task = _thingToShowOnDashboard as ITask;
+			var task = _thingToShowOnDashboard as ITask;
 			//if we don't know the actual count, or it is irrelevant, don't show the bar
 			if (task == null || task.GetReferenceCount() <= 0 || task.GetRemainingCount() < 0)
 			{
 				return;
 			}
 
-			Color doneColor = _doneColor;
-			Color todoColor = Color.FromArgb(100, doneColor);
+			var doneColor = _doneColor;
+			var todoColor = Color.FromArgb(100, doneColor);
 			if (DisplaySettings.Default.UsingProjectorScheme)
 			{
-				byte rgbMax = Math.Max(doneColor.R, Math.Max(doneColor.G, doneColor.B));
+				var rgbMax = Math.Max(doneColor.R, Math.Max(doneColor.G, doneColor.B));
 				doneColor = Color.FromArgb(doneColor.R == rgbMax ? 255 : 0,
 										   doneColor.G == rgbMax ? 255 : 0,
 										   doneColor.B == rgbMax ? 255 : 0);
 				todoColor = Color.FromArgb(50, 0, 0, 0);
 			}
-			Pen pen = new Pen(doneColor, ProgressBarHeight);
+			var pen = new Pen(doneColor, ProgressBarHeight);
 
-			int nudge = CurrentMouseButtonNudge;
-			int left = ClientRectangle.Left + LeftMarginWidth;
-			int rightEdge = ClientRectangle.Right - RightMarginWidth;
-			int progressBarTop = ClientRectangle.Bottom - BottomMarginWidth -
-								 (HasProgressBar() ? ProgressBarHeight : 0);
-			float percentDone = (float) 100.0 *
-								(task.GetReferenceCount() - task.GetRemainingCount()) /
-								task.GetReferenceCount();
+			var nudge = CurrentMouseButtonNudge;
+			var left = ClientRectangle.Left + LeftMarginWidth;
+			var rightEdge = ClientRectangle.Right - RightMarginWidth;
+			var progressBarTop = ClientRectangle.Bottom - BottomMarginWidth -
+			                     (HasProgressBar() ? ProgressBarHeight : 0);
+			var percentDone = (float) 100.0 *
+			                  (task.GetReferenceCount() - task.GetRemainingCount()) /
+			                  task.GetReferenceCount();
 			percentDone = Math.Max(Math.Min(percentDone, 100), 0);
 					// ensure that 0 <= percentDone <= 100
 
-			float rightEdgeOfDonePart = (float) (percentDone / 100.0) *
+			var rightEdgeOfDonePart = (float) (percentDone / 100.0) *
 										(rightEdge - left - ProgressBarLeftMargin -
 										 ProgressBarRightMargin) + left + ProgressBarLeftMargin;
 			graphics.DrawLine(pen,
@@ -244,17 +243,17 @@ namespace WeSay.LexicalTools.Dashboard
 							  progressBarTop + nudge);
 		}
 
-		public virtual bool HasProgressBar()
+		protected virtual bool HasProgressBar()
 		{
-			ITask task = _thingToShowOnDashboard as ITask;
+			var task = _thingToShowOnDashboard as ITask;
 			return task != null && task.AreCountsRelevant();
 		}
 
 		public virtual IEnumerable<Size> GetPossibleButtonSizes()
 		{
-			List<Size> textSizes = GetPossibleTextSizes();
-			List<Size> possibleSizes = new List<Size>(textSizes.Count);
-			foreach (Size size in textSizes)
+			var textSizes = GetPossibleTextSizes();
+			var possibleSizes = new List<Size>(textSizes.Count);
+			foreach (var size in textSizes)
 			{
 				possibleSizes.Add(new Size(size.Width + LeftMarginWidth + RightMarginWidth,
 										   size.Height + TopMarginWidth + BottomMarginWidth +
@@ -271,8 +270,8 @@ namespace WeSay.LexicalTools.Dashboard
 		/// <returns>Possible sizes</returns>
 		protected List<Size> GetPossibleTextSizes()
 		{
-			Graphics g = Graphics.FromHwnd(Handle);
-			List<Size> possibleSizes = DisplaySettings.GetPossibleTextSizes(g,
+			var g = Graphics.FromHwnd(Handle);
+			var possibleSizes = DisplaySettings.GetPossibleTextSizes(g,
 																			Text,
 																			Font,
 																			FormatFlags);

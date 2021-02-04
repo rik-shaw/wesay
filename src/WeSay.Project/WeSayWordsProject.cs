@@ -740,7 +740,7 @@ namespace WeSay.Project
 		}
 
 
-		// This is only used in Addin.Transform.SfmTransformer to fix cross references
+		// This is only used in WeSay.Addin.Transform.SfmTransformer to fix cross references
 		// that have been save in the lift as NFD when they should be NFC - see WS-356
 		public void TouchAllIfCrossReferences()
 		{
@@ -1963,7 +1963,7 @@ namespace WeSay.Project
 				return false;
 			}
 			string regex = string.Format("lang\\s*=\\s*[\"']{0}[\"']", Regex.Escape(id));
-			return FileUtils.GrepFile(PathToLiftFile, regex);
+			return FileHelper.Grep(PathToLiftFile, regex);
 		}
 
 		/// <summary>

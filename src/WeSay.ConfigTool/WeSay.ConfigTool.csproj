@@ -51,7 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Addin.Backup\Addin.Backup.csproj" />
+    <ProjectReference Include="..\WeSay.Addin.Backup\WeSay.Addin.Backup.csproj" />
     <ProjectReference Include="..\WeSay.LexicalModel\WeSay.LexicalModel.csproj" />
     <ProjectReference Include="..\WeSay.LexicalTools\WeSay.LexicalTools.csproj" />
     <ProjectReference Include="..\WeSay.AddinLib\WeSay.AddinLib.csproj" />

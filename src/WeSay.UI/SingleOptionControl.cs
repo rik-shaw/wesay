@@ -150,7 +150,7 @@ namespace WeSay.UI
 			SuspendLayout();
 
 			Height = 0;
-			const int initialPanelWidth = 200;
+			//rik-notused const int initialPanelWidth = 200;
 			SetupComboControl(optionRef);
 
 			components.Add((Control)_control); //so it will get disposed of when we are

@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Addin.Transform\Addin.Transform.csproj" />
+    <ProjectReference Include="..\WeSay.Addin.Transform\WeSay.Addin.Transform.csproj" />
     <ProjectReference Include="..\WeSay.AddinLib\WeSay.AddinLib.csproj" />
   </ItemGroup>
 

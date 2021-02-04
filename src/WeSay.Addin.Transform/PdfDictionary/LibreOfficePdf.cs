@@ -298,7 +298,7 @@ namespace Addin.Transform.PdfDictionary
 
 		/* public void ShowMoreInfoDialog(Form parentForm)
 		{
-			var dlg = new Addin.Transform.PdfDictionary.AboutMakePdfDictionary();
+			var dlg = new WeSay.Addin.Transform.PdfDictionary.AboutMakePdfDictionary();
 			dlg.ShowDialog();
 		}*/
 

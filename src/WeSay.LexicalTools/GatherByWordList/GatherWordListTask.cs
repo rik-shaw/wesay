@@ -22,7 +22,7 @@ namespace WeSay.LexicalTools.GatherByWordList
 {
 	public class GatherWordListTask: WordGatheringTaskBase
 	{
-		private readonly ViewTemplate _viewTemplate;
+		private new readonly ViewTemplate _viewTemplate;
 		private readonly string _lexemeFormListFileName;
 		private GatherWordListControl _gatherControl;
 		private List<LexEntry> _words;
