@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using SIL.WritingSystems;
-using WeSay.LexicalTools.Properties;
 using WeSay.UI;
 using WeSay.UI.AutoCompleteTextBox;
 

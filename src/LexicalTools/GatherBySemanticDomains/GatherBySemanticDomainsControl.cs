@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using WeSay.LexicalTools.Properties;
 using WeSay.Project;
 using WeSay.UI;
 using WeSay.UI.TextBoxes;

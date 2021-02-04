@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFramework>net461</TargetFramework>
     <RootNamespace>WeSay.ConfigTool</RootNamespace>
     <AssemblyName>WeSay.ConfigTool</AssemblyName>
     <Configurations>Debug;Release</Configurations>
@@ -15,19 +15,22 @@
     <ApplicationIcon>..\..\artwork\WeSay.Setup.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
+
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="SIL.Chorus.App" Version="3.1.0-*" />
     <PackageReference Include="SIL.Chorus.LibChorus" Version="3.1.0-*" />
-    <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.DictionaryServices" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Lift" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Windows.Forms" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Windows.Forms.Keyboarding" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Windows.Forms.WritingSystems" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Core" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-*" />
+    <PackageReference Include="SIL.DictionaryServices" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Lift" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Windows.Forms" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Windows.Forms.Keyboarding" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Windows.Forms.WritingSystems" Version="8.0.0-*" />
+    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-*" />
     <Reference Include="Geckofx-Core">
       <HintPath>..\..\output\$(Configuration)\Geckofx-Core.dll</HintPath>
     </Reference>
@@ -42,6 +45,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SIL.Windows.Forms.Keyboarding.8.0.0-beta0239\build\KeymanLink.dll</HintPath>
     </Reference>
+
+    <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
+
   </ItemGroup>
 
   <ItemGroup>

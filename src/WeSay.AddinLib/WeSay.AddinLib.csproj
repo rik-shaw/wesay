@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFramework>net461</TargetFramework>
     <RootNamespace>WeSay.AddinLib</RootNamespace>
     <AssemblyName>WeSay.AddinLib</AssemblyName>
     <Configurations>Debug;Release</Configurations>
@@ -13,13 +13,27 @@
     <OutputPath>../../output/$(Configuration)</OutputPath>
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
     <UseWindowsForms>true</UseWindowsForms>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyOriginatorKeyFile>../palaso.snk</AssemblyOriginatorKeyFile>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>true</IncludeSymbols>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Core" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-*" />
+    <PackageReference Include="SIL.WritingSystems" Version="8.0.0-*" />
     <PackageReference Include="Mono.Addins" Version="1.3.8" />
+
+    <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
+
   </ItemGroup>
 
   <ItemGroup>

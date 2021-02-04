@@ -5,6 +5,11 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+
+using System.Reflection;
+using System.Resources;
+
+
 using SIL.Reporting;
 using WeSay.AddinLib;
 using WeSay.Foundation;

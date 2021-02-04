@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFramework>net461</TargetFramework>
     <RootNamespace>WeSay.Data</RootNamespace>
     <AssemblyName>WeSay.Data</AssemblyName>
     <Configurations>Debug;Release</Configurations>
@@ -15,8 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SIL.Core" Version="8.0.0-beta0258" />
-    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-beta0258" />
+    <PackageReference Include="SIL.Core" Version="8.0.0-*" />
+    <PackageReference Include="SIL.Core.Desktop" Version="8.0.0-*" />
     <PackageReference Include="System.Reflection" Version="4.3.0" />
 
   </ItemGroup>

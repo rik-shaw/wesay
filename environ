@@ -17,7 +17,7 @@ BASE="$(pwd)"
 GDK_SHARP=/usr/lib/cli/gdk-sharp-2.0
 
 MONO_DEBUG=explicit-null-checks
-MONO_RUNTIME=v4.0.30319
+# MONO_RUNTIME=v4.0.30319
 MONO_PATH="${GDK_SHARP}:${GECKOFX}"
 
 # Ensure that we will search the standard pkgconfig directories after

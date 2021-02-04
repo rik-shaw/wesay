@@ -7,7 +7,6 @@ using SIL.i18n;
 using SIL.Reporting;
 using WeSay.Foundation;
 using WeSay.LexicalModel;
-using WeSay.LexicalTools.Properties;
 using WeSay.Project;
 using WeSay.UI;
 

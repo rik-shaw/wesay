@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFramework>net461</TargetFramework>
     <RootNamespace>TreeViewList</RootNamespace>
     <AssemblyName>TreeViewList</AssemblyName>
     <Configurations>Debug;Release</Configurations>

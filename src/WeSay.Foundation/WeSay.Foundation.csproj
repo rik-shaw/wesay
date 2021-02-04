@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFramework>net461</TargetFramework>
     <RootNamespace>WeSay.Foundation</RootNamespace>
     <AssemblyName>WeSay.Foundation</AssemblyName>
     <Configurations>Debug;Release</Configurations>
@@ -13,6 +13,15 @@
     <OutputPath>../../output/$(Configuration)</OutputPath>
     <WarningsAsErrors>NU1605;CS8002</WarningsAsErrors>
     <UseWindowsForms>true</UseWindowsForms>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyOriginatorKeyFile>../palaso.snk</AssemblyOriginatorKeyFile>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>true</IncludeSymbols>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>  
+
   </PropertyGroup>
 
 </Project>

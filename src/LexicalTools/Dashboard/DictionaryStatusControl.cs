@@ -2,6 +2,12 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
+
+using L10NSharp;
+using SIL.IO;
+using SIL.Reporting;
+using WeSay.LexicalTools.Properties;
+
 using WeSay.Project;
 using SIL.i18n;
 
