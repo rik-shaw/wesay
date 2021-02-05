@@ -56,7 +56,7 @@ namespace WeSay.Project
 			creator.SetWritingSystemsForFields();
 		}
 
-		///rik setting to "public" instead of "internal" since needed by tests (??)
+		//rik-public-for-tests
 		public void SetWritingSystemsForFields()
 		{
 			var liftDom = new XmlDocument();

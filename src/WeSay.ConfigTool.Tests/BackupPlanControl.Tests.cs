@@ -58,7 +58,7 @@ namespace WeSay.ConfigTool.Tests
 							{
 								CreateNewAndGotoBackupControl(tempFolder.Path);
 
-								///rik nunitforms test: TextBoxTester t = new TextBoxTester("_pathText", _window);
+								//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_pathText", _window);
 								// t.Properties.Text = backupHere.Path;
 								// CloseApp();
 

@@ -1733,6 +1733,8 @@ namespace WeSay.Project
 			}
 			catch (Exception error)
 			{
+				//rik-log
+				MessageBox.Show(error.Message);
 				ErrorReport.NotifyUserOfProblem("Another program has WeSay's dictionary file open, so we cannot make the input system change.  Make sure WeSay isn't running.");
 				return false;
 			}

@@ -19,7 +19,7 @@ namespace WeSay.UI.Tests
 {
 	[TestFixture, Apartment(ApartmentState.STA)]
 	[Platform(Exclude = "Unix")]  // Cant initialize XULRunner in these tests on Linux.
-	class GeckoTests ///rik : NUnitFormTest
+	class GeckoTests //rik-nunitformtest : NUnitFormTest
 	{
 		[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
 		[return: MarshalAs(UnmanagedType.Bool)]
@@ -84,7 +84,7 @@ namespace WeSay.UI.Tests
 			Assert.AreSame(ws, textBox.WritingSystem);
 			_window.Controls.Add((GeckoBox)textBox);
 			_window.Show();
-			// ///rik nunitforms test: ControlTester t = new ControlTester("ControlUnderTest", _window);
+			// //rik-nunitformtest: ControlTester t = new ControlTester("ControlUnderTest", _window);
 			// KeyboardController keyboardController = new KeyboardController(t);
 			// Application.DoEvents();
 			// keyboardController.Press(Convert.ToInt16("T"));
@@ -108,7 +108,7 @@ namespace WeSay.UI.Tests
 			Assert.AreSame(ws, textBox.WritingSystem);
 			_window.Controls.Add((GeckoBox)textBox);
 			_window.Show();
-			// ///rik nunitforms test: ControlTester t = new ControlTester("ControlUnderTest", _window);
+			// //rik-nunitformtest: ControlTester t = new ControlTester("ControlUnderTest", _window);
 			// textBox.Text = "Test";
 			// KeyboardController keyboardController = new KeyboardController(t);
 			// Application.DoEvents();
@@ -137,7 +137,7 @@ namespace WeSay.UI.Tests
 			Assert.AreSame(ws, textBox.WritingSystem);
 			_window.Controls.Add((GeckoBox)textBox);
 			_window.Show();
-			// ///rik nunitforms test: ControlTester t = new ControlTester("ControlUnderTest", _window);
+			// //rik-nunitformtest: ControlTester t = new ControlTester("ControlUnderTest", _window);
 			// textBox.Text = "Value";
 			// KeyboardController keyboardController = new KeyboardController(t);
 			// Application.DoEvents();
@@ -297,7 +297,7 @@ namespace WeSay.UI.Tests
 
 			_window.Controls.Add(_listBox);
 			_window.Show();
-			// ///rik nunitforms test: ControlTester t = new ControlTester("ControlUnderTest", _window);
+			// //rik-nunitformtest: ControlTester t = new ControlTester("ControlUnderTest", _window);
 
 			// Application.DoEvents();
 			// Rectangle r = _listBox.GetItemRectangle(1);
@@ -369,7 +369,7 @@ namespace WeSay.UI.Tests
 
 			_window.Controls.Add((GeckoComboBox)comboBox);
 			_window.Show();
-			// ///rik nunitforms test: ControlTester t = new ControlTester("ControlUnderTest", _window);
+			// //rik-nunitformtest: ControlTester t = new ControlTester("ControlUnderTest", _window);
 			// KeyboardController keyboardController = new KeyboardController(t);
 			// Application.DoEvents();
 
@@ -461,10 +461,14 @@ namespace WeSay.UI.Tests
 				}
 				catch (ApplicationException e)
 				{
+					//rik-log
+					MessageBox.Show(e.Message);
 					Assert.Fail();
 				}
 				catch (Exception e)
 				{
+					//rik-log
+					MessageBox.Show(e.Message);
 					Assert.Fail();
 				}
 			}

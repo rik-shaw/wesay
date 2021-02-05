@@ -29,6 +29,8 @@ namespace WeSay.UI
 			catch (Exception error)
 			{
 				//trying to harden this against the mysteriously disappearing from a host designer
+				//rik-log
+				MessageBox.Show(error.Message);
 			}
 		}
 

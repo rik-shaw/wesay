@@ -199,10 +199,14 @@ namespace WeSay.App
 			{
 				_oneInstancePerProjectMutex = new Mutex(true, mutexId, out mutexAcquired);
 				mutexAcquired = true;
+				//rik-log
+				MessageBox.Show(e.Message);
 			}
 			catch (AbandonedMutexException e)
 			{
 				//that's ok, we'll get it below
+				//rik-log
+				MessageBox.Show(e.Message);
 			}
 
 			using (var dlg = new SimpleProgressDialog("Waiting for other WeSay to finish..."))
@@ -220,6 +224,8 @@ namespace WeSay.App
 				}
 				catch (Exception e)
 				{
+					//rik-log
+					MessageBox.Show(e.Message);
 					ErrorReport.NotifyUserOfProblem(e,
 						"There was a problem starting WeSay which might require that you restart your computer.");
 				}

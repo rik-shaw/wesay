@@ -318,7 +318,7 @@ namespace WeSay.LexicalTools.Dashboard
 			}
 		}
 
-		///rik making public for tests
+		//rik-public-for-tests
 		public static List<Size> ComputeSmallestPossibleButtonSizes(
 			IEnumerable<IEnumerable<Size>> possibleSizesOfButtons)
 		{
@@ -462,7 +462,7 @@ namespace WeSay.LexicalTools.Dashboard
 									  availableSpaceForButtons.Width/(_bestButtonSize.Width + _buttonMargin.Horizontal));
 		}
 
-		///rik making public for tests
+		//rik-public-for-tests
 		public static Size ComputeBestButtonSize(List<Size> smallestPossibleSizes,
 												   Size availableSpaceForButtons,
 												   IEnumerable<int> buttonsPerGroup)

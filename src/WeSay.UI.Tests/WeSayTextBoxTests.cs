@@ -12,7 +12,7 @@ using System.Threading;
 namespace WeSay.UI.Tests
 {
 	[TestFixture]
-	public class WeSayTextBoxTests ///rik : NUnitFormTest
+	public class WeSayTextBoxTests //rik-nunitformtest : NUnitFormTest
 	{
 		//rik-notused private Form _window;
 

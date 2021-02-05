@@ -126,7 +126,7 @@ namespace WeSay.UI.AutoCompleteTextBox
 			return (KV) ((object) v);
 		}
 
-		///rik made public for tests
+		//rik-public-for-tests
 		public Button AddNewButton
 		{
 			get { return _addNewButton; }
@@ -171,7 +171,7 @@ namespace WeSay.UI.AutoCompleteTextBox
 			}
 		}
 
-		///rik changed to public for tests
+		//rik-public-for-tests
 		public bool HasProblems
 		{
 			get

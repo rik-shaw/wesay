@@ -248,7 +248,7 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			AddInitialEntries();
 // 			ClickAddWord();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// Assert.IsTrue(t.Properties.Focused);
 
 // 		}
@@ -320,10 +320,10 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void GoToLexicalEntryUseFind(string lexemeForm)
 // 		{
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// t.Enter(lexemeForm);
 // 			// t.FireEvent("KeyDown", new KeyEventArgs(Keys.Enter));
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 // 			// string label = GetSelectedLabel((WeSayListView) l.Properties);
 // 			// Assert.AreEqual(lexemeForm, label);
 // 		}
@@ -335,7 +335,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void AssertExistenceOfEntryInList(string form, bool shouldExist)
 // 		{
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 // 			// bool found = false;
 
 // 			// for (int i = 0;i < l.Properties.Items.Count;++i)
@@ -354,7 +354,7 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			AddInitialEntries();
 // 			DeleteWord();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // //            while(true)
 // //                Application.DoEvents();
 // 			// Assert.IsTrue(t.Properties.Focused);
@@ -365,7 +365,7 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			AddInitialEntries();
 // 			DeleteWord();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// Assert.AreEqual(t.Text, LexemeFormOfSelectedEntry);
 // 		}
 
@@ -382,7 +382,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void DeletingLastWordSelectsPreviousWordInList()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: ListViewTester t = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester t = new ListViewTester("_recordsListBox", _window);
 // 			// ((WeSayListView) t.Properties).SelectedIndex = 2;
 // 			// Assert.AreEqual("Tertiary", LexemeFormOfSelectedEntry);
 // 			// DeleteWord();
@@ -421,7 +421,7 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			StartWithEmpty();
 // 			ClickAddWord();
-// 			///rik nunitforms test: ListViewTester t = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester t = new ListViewTester("_recordsListBox", _window);
 // 			// Assert.AreEqual(0, ((WeSayListView) t.Properties).SelectedIndex);
 // 			// string label = GetSelectedLabel((WeSayListView) t.Properties);
 // 			// Assert.AreEqual("(Empty)", label);
@@ -432,14 +432,14 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			StartWithEmpty();
 // 			ClickAddWord();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// Assert.IsTrue(t.Properties.Visible);
 // 		}
 
 // 		[Test]
 // 		public void EmptyDictionary_AddWordsTwice_OneWordExists()
 // 		{
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 // 			// StartWithEmpty();
 // 			// ClickAddWord();
 // 			// Assert.AreEqual(1, l.Properties.Items.Count);
@@ -452,7 +452,7 @@ namespace WeSay.LexicalTools.Tests
 // 		{
 // 			StartWithEmpty();
 // 			ClickAddWord();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Enter("test");
 // 			// Assert.AreEqual("test", t.Text);
 // 		}
@@ -477,7 +477,7 @@ namespace WeSay.LexicalTools.Tests
 // 			Application.DoEvents();
 // 			Assert.AreEqual(2, _lexEntryRepository.CountAllItems());
 // 			LexicalFormMustMatch(string.Empty);
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 // 			// select other entry
 // 			// l.Select((l.Properties.SelectedIndices[0] + 1) % 2);
 // 			// LexicalFormMustMatch(form);
@@ -500,9 +500,9 @@ namespace WeSay.LexicalTools.Tests
 // 		public void NewWord_ControlNAfterEnteringLexicalForm_CreatesNewWord()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// PressCtrlN(t, false);
-// 			///rik nunitforms test: t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// EnterWordAndPressCtrlN(t, "NewWord1", false);
 
 // 			// VerifySelectedWordIs("(Empty)");
@@ -525,7 +525,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void EmptyDictionary_DeleteButtonDisabled()
 // 		{
 // 			StartWithEmpty();
-// 			///rik nunitforms test: ButtonTester l = new ButtonTester("_btnDeleteWord", _window);
+// 			//rik-nunitformtest: ButtonTester l = new ButtonTester("_btnDeleteWord", _window);
 // 			// Assert.IsFalse(l.Properties.Enabled);
 // 		}
 
@@ -533,11 +533,11 @@ namespace WeSay.LexicalTools.Tests
 // 		public void EmptyDictionary_EnterText_PressFindButton_NoCrash()
 // 		{
 // 			StartWithEmpty();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// t.Enter("blah");
-// 			///rik nunitforms test: ButtonTester b = new ButtonTester("_findButton", _window);
+// 			//rik-nunitformtest: ButtonTester b = new ButtonTester("_findButton", _window);
 // 			// b.Click();
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 
 // 			// Assert.AreEqual(-1, ((WeSayListView) l.Properties).SelectedIndex);
 // 		}
@@ -546,7 +546,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void IfNoWordsDeleteButtonDisabled()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: ButtonTester l = new ButtonTester("_btnDeleteWord", _window);
+// 			//rik-nunitformtest: ButtonTester l = new ButtonTester("_btnDeleteWord", _window);
 // 			// Assert.IsTrue(l.Properties.Enabled);
 // 			// DeleteAllEntries();
 // 			// Assert.IsFalse(l.Properties.Enabled);
@@ -571,7 +571,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void CustomTextFieldPreserved()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Enter("test");
 
 // 			// CustomTextFieldPreservedCore("*MyEntryCustom");
@@ -671,7 +671,7 @@ namespace WeSay.LexicalTools.Tests
 // 			Assert.Less(0,
 // 						entry.Properties.Count,
 // 						"the setup of this test should have some custom properties");
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Enter("test");
 // 			// Assert.Less(0,
 // 			// 			entry.Properties.Count,
@@ -723,7 +723,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void ClickStarOfLexemeForm()
 // 		{
-// 			///rik nunitforms test: ControlTester t = new ControlTester(GetNameOfLexicalFormAnnotationControl(), _window);
+// 			//rik-nunitformtest: ControlTester t = new ControlTester(GetNameOfLexicalFormAnnotationControl(), _window);
 // 			// t.Click();
 // 			// GetEditControl(Field.FieldNames.EntryLexicalForm.ToString());
 // 		}
@@ -744,7 +744,7 @@ namespace WeSay.LexicalTools.Tests
 // 			_tabControl.SelectedIndex = 0;
 // 			ActivateTask();
 
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Properties.Visible = true;
 
 // 			LexicalFormMustMatch("one");
@@ -755,7 +755,7 @@ namespace WeSay.LexicalTools.Tests
 // 			_tabControl.SelectedIndex = 1;
 // 			_tabControl.SelectedIndex = 0;
 // 			ActivateTask();
-// 			///rik nunitforms test: t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Properties.Visible = true;
 // 			// LexicalFormMustMatch("plus");
 // 		}
@@ -770,7 +770,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void LexicalFormMustMatch(string value)
 // 		{
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// Assert.AreEqual(value, t.Properties.Text);
 // 		}
 
@@ -781,7 +781,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void TypeInLexicalForm(string value)
 // 		{
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetLexicalFormControlName(), _window);
 // 			// t.Properties.Text = value;
 // 			//change the focus
 // 			ShiftFocus();
@@ -798,7 +798,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void TypeInMeaning(string value)
 // 		{
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester(GetMeaningControlName(), _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester(GetMeaningControlName(), _window);
 // 			// t.Properties.Text = value;
 // 		}
 
@@ -814,7 +814,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void ClickAddWord()
 // 		{
-// 			///rik nunitforms test: ButtonTester l = new ButtonTester("_btnNewWord", _window);
+// 			//rik-nunitformtest: ButtonTester l = new ButtonTester("_btnNewWord", _window);
 // 			// l.Click();
 // 		}
 
@@ -825,7 +825,7 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void ClickFindButton()
 // 		{
-// 			///rik nunitforms test: ButtonTester b = new ButtonTester("_findButton", this._window);
+// 			//rik-nunitformtest: ButtonTester b = new ButtonTester("_findButton", this._window);
 // 			// b.Click();
 // 		}
 
@@ -833,10 +833,10 @@ namespace WeSay.LexicalTools.Tests
 // 		public void FindText_EnterTextThenPressFindButton_Finds()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// t.Enter("Secondary");
 // 			// ClickFindButton();
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 
 // 			// string label = GetSelectedLabel((WeSayListView) l.Properties);
 // 			// Assert.AreEqual("Secondary", label);
@@ -848,7 +848,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void FindText_EnterTextOneCharacterAtATime_DoesNotThrow()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			//This is a beter test but gives a cryptic error message
 // 			//KeyboardController keyboardController = new KeyboardController(t);
 // 			//t.Properties.Focus();
@@ -866,10 +866,10 @@ namespace WeSay.LexicalTools.Tests
 // 		public void FindText_Enter_Finds()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// t.Enter("Secondary");
 // 			// t.FireEvent("KeyDown", new KeyEventArgs(Keys.Enter));
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 
 // 			// string label = GetSelectedLabel((WeSayListView) l.Properties);
 // 			// Assert.AreEqual("Secondary", label);
@@ -879,7 +879,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void FindText_EnterWordNotInDictionaryThenPressCtrlN_AddsWordInFindText()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// EnterWordAndPressCtrlN(t, "NewWord", true);
 
 // 			// VerifySelectedWordIs("NewWord");
@@ -887,13 +887,13 @@ namespace WeSay.LexicalTools.Tests
 
 // 		private void VerifySelectedWordIs(string word)
 // 		{
-// 			///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", this._window);
+// 			//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", this._window);
 
 // 			// string label = GetSelectedLabel((WeSayListView) l.Properties);
 // 			// Assert.AreEqual(word, label);
 // 		}
 
-// 		///rik nunitforms test: 
+// 		//rik-nunitformtest: 
 // 		// private void EnterWordAndPressCtrlN(TextBoxTester t, string word, bool focusOnFindBox)
 // 		// {
 // 		// 	t.Enter(word);
@@ -901,7 +901,7 @@ namespace WeSay.LexicalTools.Tests
 // 		// 	PressCtrlN(t, focusOnFindBox);
 // 		// }
 		
-// 		///rik nunitforms test: 
+// 		//rik-nunitformtest: 
 // 		// private void PressCtrlN(ControlTester t, bool focusOnFindBox)
 // 		// {
 // 		// 	((DictionaryControl)_task.Control).AddNewWord(focusOnFindBox);
@@ -911,7 +911,7 @@ namespace WeSay.LexicalTools.Tests
 // 		public void FindText_EnterWordInDictionaryThenPressCtrlN_AddsWordInFindTextSoTwoEntries()
 // 		{
 // 			AddInitialEntries();
-// 			///rik nunitforms test: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
+// 			//rik-nunitformtest: TextBoxTester t = new TextBoxTester("_textToSearchForBox", _window);
 // 			// t.Enter("Secondary");
 // 			// Application.DoEvents();
 // 			// PressCtrlN(t, true);
@@ -1020,7 +1020,7 @@ namespace WeSay.LexicalTools.Tests
 // 		private void PutCursorInMeaningFieldOfSecondEntry()
 // 		{
 // 			//skip to second word (first has extra stuff in the sense)
-// 			///rik nunitforms test: ListViewTester t = new ListViewTester("_recordsListBox", _window);
+// 			//rik-nunitformtest: ListViewTester t = new ListViewTester("_recordsListBox", _window);
 // 			// t.Properties.Focus();
 // 			// ((WeSayListView) t.Properties).SelectedIndex = 1;
 // 			// Assert.AreEqual("Secondary", LexemeFormOfSelectedEntry);
@@ -1229,7 +1229,7 @@ namespace WeSay.LexicalTools.Tests
 // 		// public void ClickOnWhiteSpaceToRightOfEntry_EntryAlreadySelected_DeleteButtonStaysEnabled()
 // 		// {
 // 		// 	AddInitialEntries();
-// 		// 	///rik nunitforms test: ListViewTester l = new ListViewTester("_recordsListBox", _window);
+// 		// 	//rik-nunitformtest: ListViewTester l = new ListViewTester("_recordsListBox", _window);
 // 		// 	// ButtonTester b = new ButtonTester("_btnDeleteWord", _window);
 // 		// 	// using (MouseController mc = new MouseController(l))
 // 		// 	// {
@@ -1248,7 +1248,7 @@ namespace WeSay.LexicalTools.Tests
 // 		// public void ClickOnWhiteSpaceUnderEntries_EntrySelectionDoesNotchange()
 // 		// {
 // 		// 	AddInitialEntries();
-// 		// 	///rik nunitforms test: var l = new ListViewTester("_recordsListBox", _window);
+// 		// 	//rik-nunitformtest: var l = new ListViewTester("_recordsListBox", _window);
 // 		// 	// using (var mc = new MouseController(l))
 // 		// 	// {
 // 		// 	// 	Rectangle r = l.Properties.GetItemRect(2);

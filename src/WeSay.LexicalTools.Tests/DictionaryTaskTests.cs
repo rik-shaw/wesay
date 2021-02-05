@@ -124,7 +124,7 @@ namespace WeSay.LexicalTools.Tests
 			_task.Deactivate();
 		}
 
-       ///rik nunitforms test: [Test]
+       //rik-nunitformtest: [Test]
     //    //[NUnit.Framework.Category("UsesObsoleteExpectedExceptionAttribute"), ExpectedException(typeof (ArgumentNullException))]
     //    public void Create_NullRecordListManager_Throws()
     //    {

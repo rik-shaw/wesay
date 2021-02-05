@@ -32,7 +32,7 @@ namespace WeSay.ConfigTool.Tests
 		// [Test]
 		// public void DescriptionChangedEvent_FieldDescriptionSetBeforeEvent()
 		// {
-		// 	///rik nunitforms test: string descriptionOfFieldInEvent = string.Empty;
+		// 	//rik-nunitformtest: string descriptionOfFieldInEvent = string.Empty;
 		// 	// _field.Description = "original description";
 		// 	// _control.DescriptionOfFieldChanged +=
 		// 	// 		delegate { descriptionOfFieldInEvent = _field.Description; };

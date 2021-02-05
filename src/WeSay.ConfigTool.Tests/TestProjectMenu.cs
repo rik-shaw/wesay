@@ -46,7 +46,7 @@ namespace WeSay.ConfigTool.Tests
 		[Ignore("Haven't got the ability to find controls inside the filedialog yet")]
 		public void TestUsingOpenProject()
 		{
-			///rik nunitforms test: FormTester AdminWindow = new FormTester("WeSay Admin");
+			//rik-nunitformtest: FormTester AdminWindow = new FormTester("WeSay Admin");
 
 			// ToolStripMenuItemTester projectToolStripMenuItem =
 			// 		new ToolStripMenuItemTester("projectToolStripMenuItem");
@@ -71,7 +71,7 @@ namespace WeSay.ConfigTool.Tests
 			{
 				_window.CreateAndOpenProject(path, "th", "Thai");
 
-				///rik nunitforms test: ToolStripMenuItemTester projectToolStripMenuItem =
+				//rik-nunitformtest: ToolStripMenuItemTester projectToolStripMenuItem =
 				// 		new ToolStripMenuItemTester("projectToolStripMenuItem");
 				// ToolStripMenuItemTester launchProjectToolStripMenuItem =
 				// 		new ToolStripMenuItemTester("openThisProjectInWeSayToolStripMenuItem");
@@ -116,13 +116,13 @@ namespace WeSay.ConfigTool.Tests
 		//
 		public void ConfirmModalByYes()
 		{
-			///rik nunitforms test: ButtonTester t = new ButtonTester("Yes");
+			//rik-nunitformtest: ButtonTester t = new ButtonTester("Yes");
 			// t.Click();
 		}
 
 		public void CancelModal()
 		{
-			///rik nunitforms test: FileDialogTester x = new FileDialogTester("Browse For Folder");
+			//rik-nunitformtest: FileDialogTester x = new FileDialogTester("Browse For Folder");
 			// x.ClickCancel();
 			// ButtonTester t = new ButtonTester("Cancel");
 			// t.Click();
@@ -130,7 +130,7 @@ namespace WeSay.ConfigTool.Tests
 
 		public void ClickOKInFileDialog()
 		{
-			///rik nunitforms test: ButtonTester t = new ButtonTester("OK");
+			//rik-nunitformtest: ButtonTester t = new ButtonTester("OK");
 			// t.Click();
 		}
 

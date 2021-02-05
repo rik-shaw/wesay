@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace WeSay.UI.Tests
 {
 	[TestFixture]
-	public class WeSayListViewTests ///rik : NUnitFormTest
+	public class WeSayListViewTests //rik-nunitformtest : NUnitFormTest
 	{
 		//rik-notused private Form _window;
 		//rik-notused private WeSayListView _listView;
@@ -40,7 +40,7 @@ namespace WeSay.UI.Tests
 		// [Platform(Exclude="Unix")] // MouseController uses Win32.GetCursorPos so not portable
 		// public void ClickOnWhiteSpaceToRightOfEntry_ThenKeyboardNavigate_CorrectEntrySelected()
 		// {
-		// 	///rik nunitforms test: ListViewTester l = new ListViewTester("_listView", _window);
+		// 	//rik-nunitformtest: ListViewTester l = new ListViewTester("_listView", _window);
 		// 	// using (MouseController mc = new MouseController(l))
 		// 	// {
 		// 	// 	using (KeyboardController kc = new KeyboardController(l))
@@ -60,7 +60,7 @@ namespace WeSay.UI.Tests
 		// [Platform(Exclude="Unix")] // MouseController uses Win32.GetCursorPos so not portable
 		// public void DoubleClickOnWhiteSpaceToRightOfEntry_EntryAlreadySelected_EntryStaysSelected()
 		// {
-		// 	///rik nunitforms test: ListViewTester l = new ListViewTester("_listView", _window);
+		// 	//rik-nunitformtest: ListViewTester l = new ListViewTester("_listView", _window);
 		// 	// using (MouseController mc = new MouseController(l))
 		// 	// {
 		// 	// 	Rectangle r = l.Properties.GetItemRect(0);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Xml;
 using Autofac.Core;
 using NUnit.Framework;
@@ -727,7 +728,9 @@ namespace WeSay.Project.Tests
 					}
 					catch (DependencyResolutionException e)
 					{
-						 gotException = true;
+						//rik-log
+						MessageBox.Show(e.Message);
+						gotException = true;
 					}
 				}
 				Assert.IsTrue(gotException);

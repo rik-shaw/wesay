@@ -53,7 +53,7 @@ namespace WeSay.ConfigTool.Tests
 			// string path = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
 			// try
 			// {
-			// 	///rik nunitforms test: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
+			// 	//rik-nunitformtest: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
 			// 	// Assert.AreEqual("English (Default)", t.Properties.SelectedItem.ToString());
 			// }
 			// finally
@@ -69,7 +69,7 @@ namespace WeSay.ConfigTool.Tests
 			string path = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
 			try
 			{
-				///rik nunitforms test: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
+				//rik-nunitformtest: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
 				//select the last one
 				// t.Properties.SelectedItem = t.Properties.Items[t.Properties.Items.Count - 1];
 				// string previouslySelected = t.Properties.SelectedItem.ToString();
@@ -93,7 +93,7 @@ namespace WeSay.ConfigTool.Tests
 			string path = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
 			try
 			{
-				///rik nunitforms test: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
+				//rik-nunitformtest: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
 				//select the last one
 				// t.Properties.SelectedItem = t.Properties.Items[t.Properties.Items.Count - 1];
 				// string previouslySelected = t.Properties.SelectedItem.ToString();
@@ -121,7 +121,7 @@ namespace WeSay.ConfigTool.Tests
 			string path = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
 			try
 			{
-				///rik nunitforms test: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
+				//rik-nunitformtest: ComboBoxTester t = CreateNewAndGetLanguageCombo(path);
 				// //select the last one
 				// t.Properties.SelectedItem = t.Properties.Items[t.Properties.Items.Count - 1];
 				// CloseApp();
@@ -149,7 +149,7 @@ namespace WeSay.ConfigTool.Tests
 		{
 			using (var folder = new TemporaryFolder("InterfaceLanguageControlTests"))
 			{
-				///rik nunitforms test: var t = CreateNewAndGetLanguageCombo(folder.Path);
+				//rik-nunitformtest: var t = CreateNewAndGetLanguageCombo(folder.Path);
 				// t.Select("Thai"); // Select a known tranlsation; language = th
 				// CloseApp();
 				// var files = Directory.GetFiles(folder.Path, "*.WeSayUserConfig");
@@ -224,7 +224,7 @@ namespace WeSay.ConfigTool.Tests
 			}
 		}
 
-		///rik nunitforms test: private ComboBoxTester CreateNewAndGetLanguageCombo(string path)
+		//rik-nunitformtest: private ComboBoxTester CreateNewAndGetLanguageCombo(string path)
 		// {
 		// 	_window = new ConfigurationWindow(new string[] {});
 		// 	_window.DisableBackupAndChorusStuffForTests();
@@ -234,7 +234,7 @@ namespace WeSay.ConfigTool.Tests
 		// 	return new ComboBoxTester("_languageCombo", _window);
 		// }
 
-		///rik nunitforms test: private ComboBoxTester GoToTabAndGetLanguageCombo()
+		//rik-nunitformtest: private ComboBoxTester GoToTabAndGetLanguageCombo()
 		// {
 		// 	GoToUILanguageTab();
 		// 	var t = new ComboBoxTester("_languageCombo", _window);

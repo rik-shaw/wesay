@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using System.Xml;
 using SIL.IO;
 using SIL.Reporting;
@@ -119,6 +120,8 @@ namespace WeSay.Project.ConfigMigration.WritingSystem
 					catch(Exception error)
 					{
 						//Do nothing. If the load failed then it's not an optionlist.
+						//rik-log
+						MessageBox.Show(error.Message);
 					}
 				}
 			}
@@ -152,6 +155,8 @@ namespace WeSay.Project.ConfigMigration.WritingSystem
 			}
 			catch (Exception error)
 			{
+				//rik-log
+				MessageBox.Show(error.Message);
 				ErrorReport.NotifyUserOfProblem("Another program has {0} open, so we cannot make the input system change.  Make sure no other instances of WeSay are running.\n\n\t'{1}'", uiFileDescription, filePath);
 				return false;
 			}

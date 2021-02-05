@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Text.RegularExpressions;
+using System.Security;
+using System.Text;
 using System.Windows.Forms;
 using Gecko;
 using Gecko.DOM;
 using Gecko.Events;
-using SIL.Reporting;
 using SIL.WritingSystems;
 using WeSay.LexicalModel.Foundation;
 
@@ -88,7 +86,7 @@ namespace WeSay.UI.TextBoxes
 		}
 		public void AddRange(Object[] items)
 		{
-			this.Items.AddRange(items);
+			Items.AddRange(items);
 		}
 		public object GetItem(int index)
 		{
@@ -200,16 +198,16 @@ namespace WeSay.UI.TextBoxes
 
 		public Rectangle GetItemRectangle(int index)
 		{
-			Rectangle itemRectangle = this.ClientRectangle; // Default
+			Rectangle itemRectangle = ClientRectangle; // Default
 			if (!((_browser == null) || (_browser.Document == null)))
 			{
 
-				string id = index.ToString() + "-1";
+				string id = index + "-1";
 				var content = (GeckoLIElement)_browser.Document.GetElementById(id);
 				if (content != null)
 				{
-					nsIDOMClientRect domRect = content.DOMHtmlElement.GetBoundingClientRect();
-					itemRectangle = new Rectangle((int)domRect.GetLeftAttribute(), (int)domRect.GetTopAttribute(), (int)domRect.GetWidthAttribute(), (int)domRect.GetHeightAttribute());
+					itemRectangle = content.GetBoundingClientRect();
+					//rik-geckofx60 itemRectangle = new Rectangle((int)domRect.GetLeftAttribute(), (int)domRect.GetTopAttribute(), (int)domRect.GetWidthAttribute(), (int)domRect.GetHeightAttribute());
 				}
 			}
 			return itemRectangle;
@@ -221,9 +219,9 @@ namespace WeSay.UI.TextBoxes
 		{
 			WritingSystemDefinition ws = useFormWS ? FormWritingSystem : MeaningWritingSystem;
 			Font font = WritingSystemInfo.CreateFont(ws );
-			String entry = String.IsNullOrEmpty(word) ? "&nbsp;" : System.Security.SecurityElement.Escape(word);
+			String entry = String.IsNullOrEmpty(word) ? "&nbsp;" : SecurityElement.Escape(word);
 			String subId = useFormWS ? "-1" : "-2";
-			String id = index.ToString() + subId;
+			String id = index + subId;
 			_itemHtml.AppendFormat("<li id='{2}' {5} style='font-family:{3}; font-size:{4}pt;' onclick=\"fireEvent('selectChanged','{0}');\">{1}</li>",
 				index.ToString(), entry, id, font.Name, font.Size, GetLanguageHtml(ws));
 		}
@@ -312,8 +310,8 @@ namespace WeSay.UI.TextBoxes
 			html.Append("</style>");
 			html.Append("</head>");
 			html.AppendFormat("<body style='background:{0}; width:{1}; overflow-x:hidden' id='mainbody'><ul id='main'></ul>",
-				System.Drawing.ColorTranslator.ToHtml(BackColor),
-				this.Width);
+				ColorTranslator.ToHtml(BackColor),
+				Width);
 
 			// The following line is removed at this point and done later as a change to the inner
 			// html because otherwise the browser blows up because of the length of the
@@ -331,6 +329,8 @@ namespace WeSay.UI.TextBoxes
 			catch (Exception e)
 			{
 				SelectedIndex = 0;  // Shouldn't happen, but set to first item if it does
+				//rik-log
+				MessageBox.Show(e.Message);
 			}
 			if (UserClick != null)
 			{
@@ -383,7 +383,7 @@ namespace WeSay.UI.TextBoxes
 				// refocussing.
 				if (!_inFocus)
 				{
-					_focusElement = (GeckoHtmlElement)content;
+					_focusElement = content;
 					base.OnDomFocus(sender, e);
 				}
 			}
@@ -405,7 +405,7 @@ namespace WeSay.UI.TextBoxes
 		protected override void OnGeckoBox_Load(object sender, EventArgs e)
 		{
 			_browserIsReadyToNavigate = true;
-			_browser.AddMessageEventListener("selectChanged", ((string s) => this.OnSelectedValueChanged(s)));
+			_browser.AddMessageEventListener("selectChanged", (s => OnSelectedValueChanged(s)));
 			if (_pendingHtmlLoad != null)
 			{
 #if DEBUG
@@ -426,7 +426,7 @@ namespace WeSay.UI.TextBoxes
 			{
 				//Debug.WriteLine("SetHTML: " + html);
 				const string type = "text/html";
-				var bytes = System.Text.Encoding.UTF8.GetBytes(html);
+				var bytes = Encoding.UTF8.GetBytes(html);
 				_browser.Navigate(string.Format("data:{0};base64,{1}", type, Convert.ToBase64String(bytes)),
 					GeckoLoadFlags.BypassHistory);
 			}

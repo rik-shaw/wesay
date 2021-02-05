@@ -14,11 +14,11 @@ using WeSay.TestUtilities;
 namespace WeSay.ConfigTool.Tests
 {
 	[TestFixture, Apartment(ApartmentState.STA)]
-	public class AdminWindowTests ///rik nunitforms test: : NUnitFormTest
+	public class AdminWindowTests //rik-nunitformtest: : NUnitFormTest
 	{
 		private ConfigurationWindow _window;
 		private string _projectFolder;
-		///rik nunitforms test: private FormTester _mainWindowTester;
+		//rik-nunitformtest: private FormTester _mainWindowTester;
 
 		public void Setup()
 		{
@@ -29,14 +29,14 @@ namespace WeSay.ConfigTool.Tests
 			// _window = new ConfigurationWindow(new string[] {});
 			// _window.DisableBackupAndChorusStuffForTests();
 			// _window.Show();
-			// ///rik nunitforms test: _mainWindowTester = new FormTester(_window.Name, _window);
+			// //rik-nunitformtest: _mainWindowTester = new FormTester(_window.Name, _window);
 
 			// // _projectFolder = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
 		}
 
 		public void TearDown()
 		{
-			///rik nunitforms test: _mainWindowTester.Close();
+			//rik-nunitformtest: _mainWindowTester.Close();
 			// SIL.Windows.Forms.Keyboarding.KeyboardController.Shutdown();
 			// base.TearDown();
 			// if (BasilProject.IsInitialized)
@@ -54,7 +54,7 @@ namespace WeSay.ConfigTool.Tests
 			_window.OpenProject(BasilProject.GetPretendProjectDirectory());
 			string p = WeSayWordsProject.Project.PathToConfigFile;
 			DateTime before = File.GetLastWriteTime(p);
-			///rik nunitforms test: _mainWindowTester.Close();
+			//rik-nunitformtest: _mainWindowTester.Close();
 			// DateTime after = File.GetLastWriteTime(p);
 			// Assert.AreNotEqual(before, after);
 		}
@@ -76,7 +76,7 @@ namespace WeSay.ConfigTool.Tests
 			//paths.Add(Path.Combine(BasilProject.GetPathToLdmlWritingSystemsFolder(_projectFolder), "tpi.ldml"));
 			paths.Add(WeSayWordsProject.Project.PathToConfigFile);
 			//paths.Add(WeSayWordsProject.Project.PathToRepository);
-			///rik nunitforms test: _mainWindowTester.Close();
+			//rik-nunitformtest: _mainWindowTester.Close();
 			foreach (string p in paths)
 			{
 				if (!File.Exists(p))
@@ -131,7 +131,7 @@ namespace WeSay.ConfigTool.Tests
 		public void NewProjectShowsTasks()
 		{
 			CreateProjectAndGoToTaskControl();
-			///rik nunitforms test: CheckedListBoxTester c = new CheckedListBoxTester("_taskList", _window);
+			//rik-nunitformtest: CheckedListBoxTester c = new CheckedListBoxTester("_taskList", _window);
 			// Assert.Greater(c.Properties.Items.Count, 0);
 		}
 
@@ -139,7 +139,7 @@ namespace WeSay.ConfigTool.Tests
 		public void NewProjectShowSomeDefaultTasks()
 		{
 			CreateProjectAndGoToTaskControl();
-			///rik nunitforms test: CheckedListBoxTester c = new CheckedListBoxTester("_taskList", _window);
+			//rik-nunitformtest: CheckedListBoxTester c = new CheckedListBoxTester("_taskList", _window);
 			// Assert.Greater(c.Properties.CheckedItems.Count, 0);
 		}
 
@@ -186,7 +186,7 @@ namespace WeSay.ConfigTool.Tests
 			//            {
 			//                Application.DoEvents();
 			//            }
-			///rik nunitforms test: ControlFinder f = new ControlFinder("_areasToolStrip");
+			//rik-nunitformtest: ControlFinder f = new ControlFinder("_areasToolStrip");
 			// ToolStrip toolstrip = (ToolStrip) f.Find();
 			// foreach (ToolStripButton button in toolstrip.Items)
 			// {
@@ -197,14 +197,14 @@ namespace WeSay.ConfigTool.Tests
 
 		private void ClickToolStripButton(string name)
 		{
-			///rik nunitforms test: ToolStripButtonTester tester = new ToolStripButtonTester(name, _window);
+			//rik-nunitformtest: ToolStripButtonTester tester = new ToolStripButtonTester(name, _window);
 			// tester.Click();
 		}
 
 		[Test]
 		public void RunAndExitWithoutOpening()
 		{
-			///rik nunitforms test: _mainWindowTester.Close();
+			//rik-nunitformtest: _mainWindowTester.Close();
 			// Sldr.Cleanup();
 			// WeSayProjectTestHelper.InitializeForTests(); // for Teardown
 		}
