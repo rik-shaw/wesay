@@ -54,7 +54,7 @@ namespace WeSay.LexicalTools
 			_detailListControl.BackColor = BackColor;
 			_detailListControl.Name = "LexEntryDetailList";
 			_detailListControl.TabIndex = 1;
-			_detailListControl.Size = new Size(_scrollableContainer.ClientRectangle.Width - 20, _detailListControl.Height);
+			//rik-perf _detailListControl.Size = new Size(_scrollableContainer.ClientRectangle.Width - 20, _detailListControl.Height);
 			_detailListControl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
 			_detailListControl.SizeChanged += OnScrollableContainerOrDetailListSizeChanged;
 			_detailListControl.AutoSize = true;
@@ -94,10 +94,10 @@ namespace WeSay.LexicalTools
 
 		private void OnScrollableContainerOrDetailListSizeChanged(object sender, EventArgs e)
 		{
-			if (_detailListControl != null && !_detailListControl.IsDisposed)
-			{
-				_detailListControl.Size = new Size(_scrollableContainer.ClientRectangle.Width - 20, _detailListControl.Height);
-			}
+			//rik-perf if (_detailListControl != null && !_detailListControl.IsDisposed)
+			//{
+			//	_detailListControl.Size = new Size(_scrollableContainer.ClientRectangle.Width - 20, _detailListControl.Height);
+			//}
 		}
 
 		protected override void OnHandleDestroyed(EventArgs e)
